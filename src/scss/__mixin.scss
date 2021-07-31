@@ -1,0 +1,18 @@
+@mixin absolute ($top:null, $right:null, $bottom:null, $left:null) {
+    position: absolute;
+    top:$top;
+    right:$right;
+    bottom:$bottom;
+    left:$left;
+}
+
+@mixin square ($value) {
+    width: $value;
+    height: $value;
+}
+
+@mixin fit ($value:cover) {
+    object-fit:$value;
+    -moz-object-fit:$value;
+    -webkit-object-fit:$value;
+}
