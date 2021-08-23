@@ -5,28 +5,28 @@ let source_folder  = "src";
 let path={
     build:{
         html:       project_folder + "/",
-        css:        project_folder + "/css",
-        cssLib:     project_folder + "/css",
-        js:         project_folder + "/js",
-        img:        project_folder + "/img",
-        fonts:      project_folder + "/fonts",
+        css:        project_folder + "/assets/css",
+        cssLib:     project_folder + "/assets/css",
+        js:         project_folder + "/assets/js",
+        img:        project_folder + "/assets/img",
+        fonts:      project_folder + "/assets/fonts",
     },
     src:{
-        html:      [source_folder + "/*.html", "!" + source_folder + "/__*.html"],
-        css:       source_folder + "/scss/style.scss",
-        cssLib:    source_folder + "/scss/plugins.scss",
-        js:        source_folder + "/js/script.js",
-        pluginsJs: source_folder + "/js/plugins/*.js",
-        img:       source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
-        fonts:     source_folder + "/fonts/*.ttf",
+        html:      [source_folder + "/*.html", "!" + source_folder + "/components/__*.html"],
+        css:       source_folder + "/assets/scss/style.scss",
+        cssLib:    source_folder + "/assets/scss/plugins.scss",
+        js:        source_folder + "/assets/js/script.js",
+        pluginsJs: source_folder + "/assets/js/plugins/*.js",
+        img:       source_folder + "/assets/img/**/*.{jpg,png,svg,gif,ico,webp}",
+        fonts:     source_folder + "/assets/fonts/*.ttf",
     },
     watch:{
         html:      source_folder + "/**/*.html",
-        css:       source_folder + "/scss/**/*.scss",
-        cssLib:    source_folder + "/scss/plugins.scss",
-        js:        source_folder + "/js/**/*.js",
-        pluginsJs: source_folder + "/js/plugins/*.js",
-        img:       source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+        css:       source_folder + "assets/scss/**/*.scss",
+        cssLib:    source_folder + "assets/scss/plugins.scss",
+        js:        source_folder + "assets/js/**/*.js",
+        pluginsJs: source_folder + "assets/js/plugins/*.js",
+        img:       source_folder + "assets/img/**/*.{jpg,png,svg,gif,ico,webp}",
     },
     clean: "./" + project_folder + "/"
 }
@@ -36,7 +36,7 @@ let { src, dest } = require ('gulp'),
     browsersync   = require ("browser-sync").create(),
     fileinclude   = require ("gulp-file-include"),
     del           = require ("del"),
-    scss          = require ("gulp-sass"),
+    scss          = require('gulp-sass')(require('sass'));
     clean_css     = require ("gulp-clean-css"),
     rename        = require ("gulp-rename"),
     autoprefixer  = require ("gulp-autoprefixer"),
@@ -147,10 +147,10 @@ function images() {
 
 function fonts(params) {
     src(path.src.fonts)
-        .pipe(ttf2woff())
+        // .pipe(ttf2woff())
         .pipe(dest(path.build.fonts));
     return src(path.src.fonts)
-        .pipe(ttf2woff2())
+        // .pipe(ttf2woff2())
         .pipe(dest(path.build.fonts));
 }
 
@@ -168,12 +168,12 @@ function watchFiles(params) {
     gulp.watch([path.watch.img], images);
 }
 
-// function clean(params) {
-//     return del(path.clean);
-// }
+function clean(params) {
+    return del(path.clean);
+}
 
 
-let build = gulp.series(/*clean,*/ gulp.parallel(js,pluginJs,css, plugins, html, images,fonts,fontscopy));
+let build = gulp.series(clean, gulp.parallel(js,pluginJs,css, plugins, html, images,fonts,fontscopy));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.fonts   = fonts;
