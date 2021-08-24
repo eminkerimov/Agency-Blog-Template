@@ -22,11 +22,11 @@ let path={
     },
     watch:{
         html:      source_folder + "/**/*.html",
-        css:       source_folder + "assets/scss/**/*.scss",
-        cssLib:    source_folder + "assets/scss/plugins.scss",
-        js:        source_folder + "assets/js/**/*.js",
-        pluginsJs: source_folder + "assets/js/plugins/*.js",
-        img:       source_folder + "assets/img/**/*.{jpg,png,svg,gif,ico,webp}",
+        css:       source_folder + "/assets/scss/**/*.scss",
+        cssLib:    source_folder + "/assets/scss/plugins.scss",
+        js:        source_folder + "/assets/js/**/*.js",
+        pluginsJs: source_folder + "/assets/js/plugins/*.js",
+        img:       source_folder + "/assets/img/**/*.{jpg,png,svg,gif,ico,webp}",
     },
     clean: "./" + project_folder + "/"
 }
