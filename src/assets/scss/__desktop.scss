@@ -134,6 +134,10 @@
             padding: 3px 15px;
             background: $color1;
             border-radius: 4px;
+            &:hover {
+                color:#fff;
+                background-color: $color1;
+            }
         }
     }
 }
