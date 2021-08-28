@@ -1,5 +1,3 @@
-
-
 .slider {
     position: relative;
     height: 566px;
@@ -32,7 +30,7 @@
         }
     }
     &-content {
-        @include absolute ($top:130px, $right:0, $bottom:0, $left:0);
+        @include absolute($top: 130px, $right: 0, $bottom: 0, $left: 0);
         z-index: 2;
         color: white;
         display: flex;
@@ -89,6 +87,54 @@
         @include square(53px);
         background: url("../img/right-arrow.png") no-repeat center center;
         background-size: contain;
+    }
+}
+
+.services {
+    height: 520px;
+    &-item {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        height: 520px;
+        span:nth-child(1) {
+            font-size: 40px;
+            font-family: "FontAwesome";
+            text-align: center;
+            @include square(105px);
+            border: 3px solid $color1;
+            border-radius: 50%;
+            color: rgb(73, 203, 205);
+            line-height: 0.6;
+            padding: 30px;
+            margin: 105px 0 50px;
+        }
+        span:nth-child(2) {
+            font-size: 22px;
+            font-family: "OpenSans";
+            font-weight: 400;
+            color: $color4;
+            line-height: 1.091;
+        }
+        p {
+            font-size: 14px;
+            font-family: "OpenSans";
+            font-weight: 400;
+            color: $color4;
+            line-height: 1.857;
+            margin: 25px 0 20px;
+        }
+        a {
+            font-size: 14px;
+            font-family: "OpenSans";
+            color: #fff;
+            line-height: 1.857;
+            text-align: center;
+            padding: 3px 15px;
+            background: $color1;
+            border-radius: 4px;
+        }
     }
 }
 
