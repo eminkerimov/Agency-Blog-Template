@@ -134,9 +134,12 @@
             padding: 3px 15px;
             background: $color1;
             border-radius: 4px;
+            border: 3px solid transparent;
+            transition: 0.3s;
             &:hover {
-                color:#fff;
-                background-color: $color1;
+                color: $color1;
+                border: 3px solid $color1;
+                background-color: #fff;
             }
         }
     }
