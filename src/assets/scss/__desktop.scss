@@ -145,6 +145,49 @@
     }
 }
 
+.portfolio {
+    height: 1033px;
+    background: $color3;
+    display: flex;
+    text-align: center;
+    span {
+        font-size: 42px;
+        font-family: "OpenSans";
+        font-weight: 400;
+        color: $color4;
+        text-align: center;
+        display: block;
+        padding: 50px 0;
+    }
+    &-images img {
+        padding-bottom: 30px;
+        transition: 0.4s;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+    a.portfolio-link {
+        font-size: 24px;
+        font-family: "OpenSans";
+        font-weight: 400;
+        color: #fff;
+        line-height: 1.147;
+        text-align: center;
+        padding: 16px 40px;
+        background: $color1;
+        border-radius: 4px;
+        border: 3px solid transparent;
+        transition: 0.3s;
+        display: inline-block;
+        margin-top: 30px;
+        &:hover {
+            color: $color1;
+            border: 3px solid $color1;
+            background-color: #fff;
+        }
+    }
+}
+
 // animation----------------
 
 @keyframes moveUp {
