@@ -186,15 +186,37 @@ body {
 .team {
     height: 790px;
     padding: 45px 0 0;
-        a {
-            @include square(202px);
-            border-radius: 50%;
-            display: inline-block;
-            overflow: hidden;
-            cursor: pointer;
-            img {
-                object-fit: cover;
-            }
+    a {
+        margin: 55px 0 70px;
+        position: relative;
+        @include square(202px);
+        border-radius: 50%;
+        display: inline-block;
+        overflow: hidden;
+        cursor: pointer;
+        transition: 0.3s;
+        img {
+            object-fit: cover;
+            transition: 0.3s;
+        }
+        &:hover p {
+            visibility: visible;
+        }
+        &:hover img {
+            transform: scale(1.05);
+            opacity: 0.3;
+        }
+        p {
+            position: absolute;
+            visibility: hidden;
+            top: 30%;
+            left: 39%;
+            font-size: 85px;
+            font-family: "OpenSans";
+            color: rgb(244, 109, 109);
+            font-weight: 600;
+            animation: moveDown 3s;
+            animation-fill-mode: none;
         }
     }
 }
@@ -206,21 +228,19 @@ body {
     text-align: center;
     align-items: center;
     flex-direction: column;
-    &__title {
-        font-size: 42px;
-        font-family: "OpenSans";
-        font-weight: 400;
-        color: $color4;
-        text-align: center;
-        display: block;
-        padding: 50px 0;
-    }
     &__name {
         font-size: 22px;
         font-family: "OpenSans";
         font-weight: 400;
         color: $color4;
         line-height: 1.091;
+    }
+    &__position {
+            font-size: 14px;
+            color: $color4;
+            line-height: 1.091;
+            text-align: center;
+            margin: 13px 0 5px;
     }
     &__text {
         font-size: 14px;
@@ -230,6 +250,16 @@ body {
         line-height: 1.857;
         margin: 25px 0 20px;
     }
+}
+
+.section-title {
+    font-size: 42px;
+    font-family: "OpenSans";
+    font-weight: 400;
+    color: $color4;
+    text-align: center;
+    display: block;
+    padding: 50px 0;
 }
 
 // -----------------------
