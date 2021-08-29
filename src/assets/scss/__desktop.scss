@@ -1,3 +1,120 @@
-// body {
-//     background-color: $color1;
-// }
+body {
+    font-family: "OpenSans";
+    font-weight: 400;
+}
+
+.slider {
+    position: relative;
+    height: 566px;
+    &-list {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        &__item {
+            width: 100%;
+            img {
+                height: 100%;
+                object-fit: cover;
+                transition: 3s;
+                transform: scale(1.5);
+            }
+            &.slick-active img {
+                transform: scale(1);
+            }
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: $color1;
+            opacity: 0.4;
+            z-index: 1;
+        }
+    }
+    &-content {
+        @include absolute ($top:130px, $right:0, $bottom:0, $left:0);
+        z-index: 2;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            font-size: 63px;
+            font-weight: 600;
+            color: rgb(255, 255, 255);
+            text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.16);
+            animation-name: moveDown;
+            animation-duration: 1.5s;
+        }
+        span {
+            width: 380px;
+            font-size: 23px;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            line-height: 1.609;
+            margin: 20px 0 55px;
+            animation-name: moveDown;
+            animation-duration: 1s;
+        }
+        a {
+            color: #fff;
+            padding: 20px 40px;
+            border: 3px solid #fff;
+            border-radius: 5px;
+            background: transparent;
+            font-size: 26px;
+            line-height: 0.923;
+            animation-name: moveUp;
+            animation-duration: 1s;
+            &:hover {
+                box-shadow: 0 0 10px 0 #fff inset, 0 0 10px 4px #fff;
+              }
+        }
+    }
+    &-arrow__left {
+        position: absolute;
+        z-index: 2;
+        left: 20px;
+        top: 45%;
+        @include square(53px);
+        background: url("../img/left-arrow.png") no-repeat center center;
+        background-size: contain;
+    }
+    &-arrow__right {
+        position: absolute;
+        z-index: 2;
+        right: 20px;
+        top: 45%;
+        @include square(53px);
+        background: url("../img/right-arrow.png") no-repeat center center;
+        background-size: contain;
+    }
+}
+
+// animation----------------
+
+@keyframes moveUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+//   ------------------------------
