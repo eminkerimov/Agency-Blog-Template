@@ -132,8 +132,6 @@
     flex-direction: column;
     &__title {
         font-size: 42px;
-        font-family: "OpenSans";
-        font-weight: 400;
         color: $color4;
         text-align: center;
         display: block;
@@ -141,15 +139,11 @@
     }
     &__name {
         font-size: 22px;
-        font-family: "OpenSans";
-        font-weight: 400;
         color: $color4;
         line-height: 1.091;
     }
     &__text {
         font-size: 14px;
-        font-family: "OpenSans";
-        font-weight: 400;
         color: $color4;
         line-height: 1.857;
         margin: 25px 0 16px;
