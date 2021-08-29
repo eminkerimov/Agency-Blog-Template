@@ -1,5 +1,6 @@
 body {
     font-family: "OpenSans";
+    font-weight: 400;
 }
 
 .slider {
@@ -42,24 +43,21 @@ body {
         align-items: center;
         h1 {
             font-size: 63px;
-            font-family: "OpenSans";
             font-weight: 600;
             color: rgb(255, 255, 255);
             text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.16);
             animation-name: moveDown;
-            animation-duration: 4s;
+            animation-duration: 1.5s;
         }
         span {
             width: 380px;
             font-size: 23px;
-            font-family: "OpenSans";
-            font-weight: 400;
             text-align: center;
             color: rgb(255, 255, 255);
             line-height: 1.609;
             margin: 20px 0 55px;
             animation-name: moveDown;
-            animation-duration: 3s;
+            animation-duration: 1s;
         }
         a {
             color: #fff;
@@ -68,10 +66,9 @@ body {
             border-radius: 5px;
             background: transparent;
             font-size: 26px;
-            font-family: "OpenSans";
             line-height: 0.923;
             animation-name: moveUp;
-            animation-duration: 3s;
+            animation-duration: 1s;
             &:hover {
                 box-shadow: 0 0 10px 0 #fff inset, 0 0 10px 4px #fff;
               }
