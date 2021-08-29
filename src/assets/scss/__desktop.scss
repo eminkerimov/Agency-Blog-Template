@@ -70,6 +70,9 @@
             line-height: 0.923;
             animation-name: moveUp;
             animation-duration: 3s;
+            &:hover {
+                box-shadow: 0 0 10px 0 #fff inset, 0 0 10px 4px #fff;
+              }
         }
     }
     &-arrow-left {
