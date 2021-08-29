@@ -1,3 +1,7 @@
+body {
+    font-family: "OpenSans";
+}
+
 .slider {
     position: relative;
     height: 566px;
@@ -181,21 +185,54 @@
 
 .team {
     height: 790px;
-    padding: 45px 0 0 ;
+    padding: 45px 0 0;
+        a {
+            @include square(202px);
+            border-radius: 50%;
+            display: inline-block;
+            overflow: hidden;
+            cursor: pointer;
+            img {
+                object-fit: cover;
+            }
+        }
+    }
 }
 
 // component scss-------------
 
-.section-title {
-    font-size: 42px;
-    font-family: "OpenSans";
-    font-weight: 400;
-    color: $color4;
+.section-item {
+    display: flex;
     text-align: center;
-    display: block;
-    padding: 50px 0;
+    align-items: center;
+    flex-direction: column;
+    &__title {
+        font-size: 42px;
+        font-family: "OpenSans";
+        font-weight: 400;
+        color: $color4;
+        text-align: center;
+        display: block;
+        padding: 50px 0;
+    }
+    &__name {
+        font-size: 22px;
+        font-family: "OpenSans";
+        font-weight: 400;
+        color: $color4;
+        line-height: 1.091;
+    }
+    &__text {
+        font-size: 14px;
+        font-family: "OpenSans";
+        font-weight: 400;
+        color: $color4;
+        line-height: 1.857;
+        margin: 25px 0 20px;
+    }
 }
 
+// -----------------------
 
 // animation----------------
 
