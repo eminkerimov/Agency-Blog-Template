@@ -92,58 +92,69 @@
 
 .services {
     height: 520px;
-    &-item {
-        display: flex;
+    span {
+        font-size: 40px;
+        font-family: "FontAwesome";
         text-align: center;
-        align-items: center;
-        flex-direction: column;
-        span:nth-child(1) {
-            font-size: 40px;
-            font-family: "FontAwesome";
-            text-align: center;
-            @include square(105px);
+        @include square(105px);
+        border: 3px solid $color1;
+        border-radius: 50%;
+        color: rgb(73, 203, 205);
+        line-height: 0.6;
+        padding: 30px;
+        margin: 105px 0 50px;
+    }
+    a {
+        font-size: 14px;
+        font-family: "OpenSans";
+        color: #fff;
+        line-height: 1.857;
+        text-align: center;
+        padding: 3px 15px;
+        background: $color1;
+        border-radius: 4px;
+        border: 3px solid transparent;
+        transition: 0.3s;
+        &:hover {
+            color: $color1;
             border: 3px solid $color1;
-            border-radius: 50%;
-            color: rgb(73, 203, 205);
-            line-height: 0.6;
-            padding: 30px;
-            margin: 105px 0 50px;
-        }
-        span:nth-child(2) {
-            font-size: 22px;
-            font-family: "OpenSans";
-            font-weight: 400;
-            color: $color4;
-            line-height: 1.091;
-        }
-        p {
-            font-size: 14px;
-            font-family: "OpenSans";
-            font-weight: 400;
-            color: $color4;
-            line-height: 1.857;
-            margin: 25px 0 20px;
-        }
-        a {
-            font-size: 14px;
-            font-family: "OpenSans";
-            color: #fff;
-            line-height: 1.857;
-            text-align: center;
-            padding: 3px 15px;
-            background: $color1;
-            border-radius: 4px;
-            border: 3px solid transparent;
-            transition: 0.3s;
-            &:hover {
-                color: $color1;
-                border: 3px solid $color1;
-                background-color: #fff;
-            }
+            background-color: #fff;
         }
     }
 }
 
+// component_______________
+
+.section-item {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    &__title {
+        font-size: 42px;
+        font-family: "OpenSans";
+        font-weight: 400;
+        color: $color4;
+        text-align: center;
+        display: block;
+        padding: 50px 0;
+    }
+    &__name {
+        font-size: 22px;
+        font-family: "OpenSans";
+        font-weight: 400;
+        color: $color4;
+        line-height: 1.091;
+    }
+    &__text {
+        font-size: 14px;
+        font-family: "OpenSans";
+        font-weight: 400;
+        color: $color4;
+        line-height: 1.857;
+        margin: 25px 0 20px;
+    }
+}
 // animation----------------
 
 @keyframes moveUp {
