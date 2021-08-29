@@ -200,7 +200,8 @@ body {
             transition: 0.3s;
         }
         &:hover p {
-            visibility: visible;
+            transform: translateY(120px);
+            transition: 0.4s;
         }
         &:hover img {
             transform: scale(1.05);
@@ -208,8 +209,7 @@ body {
         }
         p {
             position: absolute;
-            visibility: hidden;
-            top: 30%;
+            top: -70px;
             left: 39%;
             font-size: 85px;
             font-family: "OpenSans";
