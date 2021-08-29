@@ -1,3 +1,4 @@
+//SLIDER
 .slider {
     position: relative;
     height: 566px;
@@ -90,19 +91,18 @@
     }
 }
 
+//SERVICE
 .services {
-    height: 520px;
-    span {
+    padding: 91px 0;
+    i {
         font-size: 40px;
-        font-family: "FontAwesome";
         text-align: center;
         @include square(105px);
         border: 3px solid $color1;
         border-radius: 50%;
         color: rgb(73, 203, 205);
-        line-height: 0.6;
         padding: 30px;
-        margin: 105px 0 50px;
+        margin-bottom: 50px ;
     }
     a {
         font-size: 14px;
@@ -152,7 +152,7 @@
         font-weight: 400;
         color: $color4;
         line-height: 1.857;
-        margin: 25px 0 20px;
+        margin: 25px 0 16px;
     }
 }
 // animation----------------
