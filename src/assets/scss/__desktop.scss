@@ -150,15 +150,6 @@
     background: $color3;
     display: flex;
     text-align: center;
-    span {
-        font-size: 42px;
-        font-family: "OpenSans";
-        font-weight: 400;
-        color: $color4;
-        text-align: center;
-        display: block;
-        padding: 50px 0;
-    }
     &-images img {
         padding-bottom: 30px;
         transition: 0.4s;
@@ -188,6 +179,17 @@
     }
 }
 
+// component scss------
+
+.section-title {
+    font-size: 42px;
+    font-family: "OpenSans";
+    font-weight: 400;
+    color: $color4;
+    text-align: center;
+    display: block;
+    padding: 50px 0;
+}
 // animation----------------
 
 @keyframes moveUp {
