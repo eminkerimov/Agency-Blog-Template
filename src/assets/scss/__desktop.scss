@@ -184,10 +184,9 @@ body {
 }
 
 .team {
-    height: 790px;
-    padding: 45px 0 0;
+    padding: 45px 0 90px;
     a {
-        margin: 55px 0 70px;
+        margin: 85px 0 70px;
         position: relative;
         @include square(202px);
         border-radius: 50%;
@@ -212,11 +211,8 @@ body {
             top: -70px;
             left: 39%;
             font-size: 85px;
-            font-family: "OpenSans";
             color: rgb(244, 109, 109);
             font-weight: 600;
-            animation: moveDown 3s;
-            animation-fill-mode: none;
         }
     }
 }
@@ -276,6 +272,7 @@ body {
         transform: translate(0);
     }
 }
+
 @keyframes moveDown {
     0% {
         opacity: 0;
