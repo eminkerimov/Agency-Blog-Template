@@ -82,7 +82,6 @@ body {
         top: 45%;
         @include square(53px);
         background: url("../img/left-arrow.png") no-repeat center center;
-        background-size: contain;
     }
     &-arrow__right {
         position: absolute;
@@ -91,7 +90,6 @@ body {
         top: 45%;
         @include square(53px);
         background: url("../img/right-arrow.png") no-repeat center center;
-        background-size: contain;
     }
 }
 
