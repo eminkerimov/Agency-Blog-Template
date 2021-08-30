@@ -91,7 +91,6 @@
 }
 
 .services {
-    height: 520px;
     &-item {
         display: flex;
         text-align: center;
@@ -146,21 +145,25 @@
 }
 
 .portfolio {
-    height: 1033px;
     background: $color3;
     display: flex;
     text-align: center;
-    &-images img {
-        padding-bottom: 30px;
-        transition: 0.4s;
-        &:hover {
-            transform: scale(1.05);
+    padding: 0 0 100px;
+    &-item {
+        display: block;
+        width: 370px;
+        height: 315px;
+        margin-bottom: 30px;
+        img {
+            transition: 0.4s;
+            object-fit: cover;
+            &:hover {
+                transform: scale(1.05);
+            }
         }
     }
-    a.portfolio-link {
+    .portfolio-link {
         font-size: 24px;
-        font-family: "OpenSans";
-        font-weight: 400;
         color: #fff;
         line-height: 1.147;
         text-align: center;
