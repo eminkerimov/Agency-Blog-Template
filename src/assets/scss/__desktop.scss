@@ -179,7 +179,7 @@ body {
             object-fit: cover;
             transition: 0.3s;
         }
-        &:hover p {
+        &:hover  span {
             transform: translateY(120px);
             transition: 0.4s;
         }
