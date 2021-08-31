@@ -125,7 +125,54 @@ body {
     }
 }
 
-// component_______________
+.portfolio {
+    background: $color3;
+    display: flex;
+    text-align: center;
+    padding: 0 0 100px;
+    &-item {
+        display: block;
+        border-radius: 2px;
+        overflow: hidden;
+        height: 315px;
+        margin-bottom: 30px;
+        img {
+            transition: 0.4s;
+            object-fit: cover;
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+    .portfolio-link {
+        font-size: 24px;
+        color: #fff;
+        line-height: 1.147;
+        text-align: center;
+        padding: 16px 40px;
+        background: $color1;
+        border-radius: 4px;
+        border: 3px solid transparent;
+        transition: 0.3s;
+        display: inline-block;
+        margin-top: 30px;
+        &:hover {
+            color: $color1;
+            border: 3px solid $color1;
+            background-color: #fff;
+        }
+    }
+}
+
+// component scss------
+
+.section-title {
+    font-size: 42px;
+    color: $color4;
+    text-align: center;
+    display: block;
+    padding: 45px 0 50px;
+}
 
 .section-item {
     display: flex;
