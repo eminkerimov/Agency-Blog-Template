@@ -151,7 +151,8 @@
     padding: 0 0 100px;
     &-item {
         display: block;
-        width: 370px;
+        border-radius: 2px;
+        overflow: hidden;
         height: 315px;
         margin-bottom: 30px;
         img {
@@ -186,12 +187,10 @@
 
 .section-title {
     font-size: 42px;
-    font-family: "OpenSans";
-    font-weight: 400;
     color: $color4;
     text-align: center;
     display: block;
-    padding: 50px 0;
+    padding: 45px 0 50px;
 }
 // animation----------------
 
