@@ -1,12 +1,13 @@
-
-let arr = [{type:"Fiat", model:"500", color:"white"},
- {type:"aaa", model:"sd3", color:"whdsd"} ];
-console.log(arr[arr.length-1])
-
-  
-    arr?.map((item, index)=>{
-      
-    if(index===arr.length){
-    console.log(item, " test");
-    }
-    })
+$(document).ready(function () {
+    $('.slider-img').slick({
+        arrows: true,
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        speed: 2000,
+        autoplaySpeed: 2500,
+        prevArrow: $('.slider-arrow-left'),
+        nextArrow: $('.slider-arrow-right'),
+        fade: true,
+    });
+});

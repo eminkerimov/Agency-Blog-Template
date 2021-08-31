@@ -1,21 +1,6 @@
-.cover {
-    background-image: url("../img/Layer\ 4-blog.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 174px;
-}
-.cover h1 {
-    font-size: 42px;
-    font-family: "OpenSans";
-    color:$color3;
-    line-height:174px;
-    font-weight: 400;
-    text-align: center;
-  }
 /* blog-section start */
 .blog-section{
-    padding-top: 75px;
+    padding-top: 98px;
 }
 .blog-item{
    display: flex;
@@ -102,9 +87,9 @@
 .blog-social-list ul li a{
     font-size: 15px;
     color: $color4;
-    transition: all .7s ease;
-    line-height: 1.6;
+    transition: all .3s ease;
     font-family:"OpenSans";
+    font-weight: 400;
 }
 .blog-social-list ul li:first-child{
     margin-right: 35px;
@@ -122,197 +107,9 @@
     margin-right: 15px;
 }
 .blog-social-list ul li a i{
-    font-size: 24px;
-}
-/* blog-right start */
-.blog-right{
-    padding-left: 20px;
-}
-.form-search{
-    margin-top: 20px;
-}
-.form-search input:focus{
-    box-shadow: none !important;
-    outline: none;
-}
-.blog-form-social{
-    margin-top: 64px;
-}
-.blog-form-social h2{
-    font-size: 26px;
-    font-family: "OpenSans";
-    line-height: 0.769;
-    color: $color7;
-    margin-bottom: 30px;
-}
-.blog-form-social ul{
-    margin-bottom: 45px;
-}
-.blog-form-social ul li{
-    display: inline-block;
-    margin-right: 15px;
-    border-radius: 50%;
-    background-color: rgb(59, 89, 151);
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
-    text-align: center;
-}
-.blog-form-social ul li a i{
-   color:white;
-   font-size: 20px;
-}
-.blog-form-social ul li:nth-child(1){
-    background-color: rgb(59, 89, 151);
-}
-.blog-form-social ul li:nth-child(2){
-    background-color:$color1;
-}
-.blog-form-social ul li:nth-child(3){
-    background-color: rgb(228, 76, 65);
-}
-.blog-btn{
-    margin-top:35px;
-  }
-.blog-btn a{
-    background-color: $color1;
-    padding:10px 50px;
-    font-size: 16px;
-    font-family: "OpenSans";
-    color:white;
-    border-radius: 3px;
-    transition: all .7s ease;
-}  
-.blog-btn a:hover{
-    background-color:$color2;
-}
-.blog-categories h2{
-    font-size: 26px;
-    font-family: "OpenSans";
-    line-height: 0.769;
-    color: $color7;
-    margin-top: 55px;
-    margin-bottom: 37px;
-}
-.blog-categories ul li a{
-    font-size: 13px;
-    color:$color2;
-    line-height: 2.769;
-    font-family: "Opensans";
-}
-.blog-categories ul li a i{
-    color: $color1;
-    font-size: 16px;
-    line-height: 1.5;
-    margin-right: 20px;
-}
-.blog-post h2{
-    margin-top: 60px;
-    margin-bottom:33px;
-    font-size: 26px;
-    font-family: "OpenSans";
-    line-height: 0.769;
-    color: $color7;
-}
-.blog-post-img{
-    overflow: hidden;
-    height: 231px;
-}
-.blog-post-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.blog-post p{
-    margin: 40px 0;
-    font-size: 13px;
-    color:$color4;
-    line-height: 1.692;
-    font-family: "OpenSans";
-    font-weight: 600;
-}
-.blog-date{
-    display: flex;
-    justify-content:space-between;
-    align-items:center;
-}
-.blog-date span,.blog-date a{
-    font-size: 14px;
-    font-family: "OpenSans";
-    line-height: 1.714;
-    color: rgb(65, 74, 90);
-    transition: all .7s ease;
-}
-.blog-date a:hover{
-    color: rgb(168, 143, 216);
-}  
-.blog-recent-post h2{
-    margin-top: 48px;
-}
-.blog-recent-post ul li span{
-    font-size: 14px;
-    color: $color4;
-    font-family: "OpenSans";
-    font-weight:600;
-    line-height: 2.571;
-    margin-left: 8px;
-}
-.blog-recent-post ul li{
-    list-style-type:disc;
-    color: $color1;
-    margin-left: 20px;
-}
-.blog-tag-list{
-    margin-bottom:14px;
-}
-.blog-tag-list a{
-    font-size: 14px;
-    color: rgb(65, 74, 90);
-    line-height: 2.571;
-    padding: 8px 18px;
-    background-color: $color10;
-    transition: all .7s ease;
-    border-radius: 3px;
-}
-.blog-tag-list a:hover{
-    background-color: $color1;
-    color: white;
-}
-.pagination{
-    padding-bottom: 75px;
-}
-.pagination-list{
-    padding-left: 93px;
-}
-.pagination-list ul li:first-child{
-    margin-right: 65px;
-}
-.pagination-list ul li:last-child{
-    margin-left:72px;
-}
-.pagination-list ul li{
-    width: 49px;
-    height: 49px;
-    border-radius: 50%;
-    background-color: rgb(246, 250, 251);
-    display: inline-block;
-    text-align: center;
-    line-height: 49px;
-    margin-right: 15px;
-    transition: all .7s ease;
+    font-size: 22px;
 }
 
-.pagination-list ul li a{
-    font-size: 23px;
-    font-family: "OpenSans";
-    color: rgb(186, 186, 186);
-    line-height: 1.043;
-}
-.pagination-list ul li:hover{
-    background-color:$color4;
-}
-.pagination-list ul span{
-    margin-right: 15px;
-}
+
 
   

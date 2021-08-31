@@ -19,55 +19,42 @@
                 @@include('components/__blogItem.html')
             </div>
             <div class="col-md-3">
-                <div class="blog-right">
+                <aside class="blog-right">
                     <div class="blog-form">
                         <form action="">
-                            <div class="input-group form-search">
-                                <input class="form-control py-2 border-right-0 border" placeholder="Search">
-                                <span class="input-group-append">
-                                    <div class="input-group-text bg-transparent"><i class="fa fa-search"></i></div>
-                                </span>
+                            <div class="search-box">
+                                <input type="text" placeholder="Search">
                             </div>
                         </form>
                         <div class="blog-form-social">
                             <h2>Follow Us</h2>
                             <ul>
-                                <li><a href="https:www.facebook.com"><i class="fa fa-facebook"
-                                            aria-hidden="true"></i></a></li>
-                                <li><a href="https:www.twitter.com"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                                 </li>
-                                <li><a href="https:www.google.com"><i class="fa fa-google-plus-official"
-                                            aria-hidden="true"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a></li>
                             </ul>
-                            <div class="input-group form-search">
-                                <input class="form-control py-2 border" placeholder="Enter Your e-mail">
-                            </div>
-                            <div class="blog-btn">
-                                <a href="#">Subscribe</a>
-                            </div>
+                            <form action="#">
+                                <input type="email" placeholder="Enter Your e-mail">
+                                <button class="blog-btn" type="submit">Subscribe</button>
+                            </form>
                         </div>
                     </div>
                     <div class="blog-categories">
                         <h2>Categories</h2>
                         <ul>
-                            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Lorem Ipsum is simply
-                                    dummy</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Lorem Ipsum is simply
-                                    dummy</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Lorem Ipsum is simply
-                                    dummy</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Lorem Ipsum is simply
-                                    dummy</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Lorem Ipsum is simply
-                                    dummy</a></li>
-                            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i> Lorem Ipsum is simply
-                                    dummy</a></li>
+                            <li><a href="#">Lorem Ipsum is simply dummy</a></li>
+                            <li><a href="#">Lorem Ipsum is simply dummy</a></li>
+                            <li><a href="#">Lorem Ipsum is simply dummy</a></li>
+                            <li><a href="#">Lorem Ipsum is simply dummy</a></li>
+                            <li><a href="#">Lorem Ipsum is simply dummy</a></li>
+                            <li><a href="#">Lorem Ipsum is simply dummy</a></li>
                         </ul>
                     </div>
                     <div class="blog-post">
                         <h2>Popular Post</h2>
                         <div class="blog-post-img">
-                            <img src="./assets/img/Layer 37.png" alt="layer-37">
+                            <img src="./assets/img/Layer37.png" alt="layer-37">
                         </div>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
                             been the industry's</p>
@@ -89,19 +76,15 @@
                             <div class="blog-tag-list">
                                 <a href="#">design</a>
                                 <a href="#">development</a>
-                            </div>
-                            <div class="blog-tag-list">
                                 <a href="#">multipurpose</a>
-                                <a href="#">creactive</a>
-                            </div>
-                            <div class="blog-tag-list">
+                                <a href="#" class="active">creactive</a>
                                 <a href="#">seo</a>
                                 <a href="#">adverticement</a>
                                 <a href="#">life</a>
                             </div>
                         </div>
                     </div>
-                </div>
+                </aside>
             </div>
         </div>
     </div>
@@ -116,7 +99,7 @@
                         <li><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
                         <li><a href="#">1</a></li>
                         <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
+                        <li class="active"><a href="#">3</a></li>
                         <li><a href="#">4</a></li>
                         <li><a href="#">5</a></li>
                         <li><a href="#">6</a></li>
@@ -129,7 +112,7 @@
         </div>
     </div>
 </section>
-
+<hr>
 <!-- Main end -->
 
 
