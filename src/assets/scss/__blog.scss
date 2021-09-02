@@ -16,11 +16,10 @@
   }
 /* blog-right section start */
 .blog-right{
-    padding-left: 20px;
+    padding-left:0px;
 }
 .search-box{
-    position: absolute;
-    top: -33px;
+  margin-top: 20px;
 }
 .search-box input,input[type="email"]{
     width: 265px;
@@ -33,7 +32,7 @@
     content: "\f002";
     font-family: 'FontAwesome';
     position: absolute;
-    right: 18px;
+    right: 35px;
     line-height: 50px; 
     color: rgb(186, 186, 186);
     font-size: 18px;
@@ -44,44 +43,53 @@
     color: rgb(186, 186, 186);
     font-weight: 600;
 }
-.blog-form-social{
-    margin-top: 64px;
-}
-.blog-form-social h2{
+.title{
     font-size: 26px;
     font-family: "OpenSans";
+    color:$color7;
     line-height: 0.769;
-    color: $color7;
-    margin-bottom: 30px;
+}
+.blog-form-social{
+    margin-top: 62px;
 }
 .blog-form-social ul{
-    margin-bottom: 45px;
+    margin-top: 32px;
+    margin-bottom:48px;
 }
 .blog-form-social ul li{
     display: inline-block;
     margin-right: 15px;
+}
+.blog-form-social ul li a{
+    display: block;
     border-radius: 50%;
     background-color: rgb(59, 89, 151);
     width: 42px;
     height: 42px;
     line-height: 42px;
     text-align: center;
+    transition:all .3s ease;
+    box-shadow: 0 5px 4px rgba(0,0,0,.5);
 }
 .blog-form-social ul li a i{
    color:white;
    font-size: 20px;
 }
-.blog-form-social ul li:nth-child(1){
+.blog-form-social ul li:nth-child(1)a{
     background-color: rgb(59, 89, 151);
 }
-.blog-form-social ul li:nth-child(2){
+.blog-form-social ul li:nth-child(2)a{
     background-color:$color1;
 }
-.blog-form-social ul li:nth-child(3){
+.blog-form-social ul li:nth-child(3)a{
     background-color: rgb(228, 76, 65);
 }
+.blog-form-social ul li a:hover{
+    transform: translate(0,-10px);
+}
 .blog-btn{
-    margin-top:35px;
+    margin-top:30px;
+    margin-bottom: 54px;
   }
 .blog-btn{
     background-color: $color1;
@@ -95,13 +103,9 @@
 .blog-btn:hover{
     background-color:$color2;
 }
-.blog-categories h2{
-    font-size: 26px;
-    font-family: "OpenSans";
-    line-height: 0.769;
-    color: $color7;
-    margin-top: 55px;
-    margin-bottom: 37px;
+.blog-categories ul{
+    margin-top:20px;
+    margin-bottom:47px;
 }
 .blog-categories ul li a{
     font-size: 13px;
@@ -125,31 +129,14 @@
 }
 .blog-categories ul li:hover a{
     color: white;
-}
-.Rounded_Rectangle_11 {
-    border-radius: 3px;
-    background-color: rgb(72, 84, 96);
-    position: absolute;
-    left: 1035px;
-    top: 852px;
-    width: 270px;
-    height: 36px;
-    z-index: 165;
-  }
-  
-  
-.blog-post h2{
-    margin-top: 60px;
-    margin-bottom:33px;
-    font-size: 26px;
-    font-family: "OpenSans";
-    line-height: 0.769;
-    color: $color7;
+    margin-left: 15px;
 }
 .blog-post-img{
     overflow: hidden;
     height: 231px;
     width: 263px;
+    margin-top:30px;
+    margin-bottom: 32px;
 }
 .blog-post-img img{
     width: 100%;
@@ -157,17 +144,18 @@
     object-fit: cover;
 }
 .blog-post p{
-    margin: 40px 0;
     font-size: 13px;
     color:$color4;
     line-height: 1.692;
     font-family: "OpenSans";
     font-weight: 600;
+    margin-bottom:25px;
 }
 .blog-date{
     display: flex;
     justify-content:space-between;
     align-items:center;
+    margin-bottom: 53px;
 }
 .blog-date span,.blog-date a{
     font-size: 14px;
@@ -179,8 +167,9 @@
 .blog-date a:hover{
     color: rgb(168, 143, 216);
 }  
-.blog-recent-post h2{
-    margin-top: 48px;
+.blog-recent-post ul{
+    margin-top:18px;
+    margin-bottom: 48px;
 }
 .blog-recent-post ul li span{
     font-size: 14px;
@@ -194,6 +183,9 @@
     list-style-type:disc;
     color: $color1;
     margin-left: 20px;
+}
+.blog-tag-list {
+    margin-top:30px;
 }
 .blog-tag-list a{
     display: inline-block;
@@ -213,20 +205,25 @@
 }
 .blog-tag-list .active{
     background-color:$color1;
+    color: white;
 }
 .pagination{
-    padding-bottom: 75px;
+    padding-bottom:88px;
 }
 .pagination-list{
     padding-left: 93px;
 }
 .pagination-list ul li:first-child{
-    margin-right: 65px;
+    margin-right: 55px;
 }
 .pagination-list ul li:last-child{
-    margin-left:72px;
+    margin-left:70px;
 }
 .pagination-list ul li{
+    display: inline-block;
+}
+.pagination-list ul li a{
+    display: block;
     width: 49px;
     height: 49px;
     border-radius: 50%;
@@ -235,17 +232,14 @@
     text-align: center;
     line-height: 49px;
     margin-right: 15px;
-    transition: all .7s ease;
-}
-
-.pagination-list ul li a{
+    transition: all .3s ease;
     font-size: 23px;
     font-family: "OpenSans";
     color: rgb(186, 186, 186);
-    line-height: 1.043;
 }
-.pagination-list ul li:hover{
+.pagination-list ul li a:hover{
     background-color:$color4;
+    color:white;
 }
 .pagination-list ul span{
     margin-right: 15px;
