@@ -265,7 +265,7 @@ body {
 }
 
 .clients {
-    padding: 90px 0;
+    padding: 105px 0;
     position: relative;
     &-comment {
         width: 90%;
@@ -288,20 +288,18 @@ body {
             }
         }
     }
-    &-arrow__left {
+    &-arrow__left,   &-arrow__right {
         position: absolute;
         z-index: 2;
         left: 177px;
-        top: 57%;
-        @include square(53px);
+        bottom:216px;
+        width: 14px;
+        height: 26px;
         background: url("../img/client-left-arrow.png") no-repeat center center;
     }
     &-arrow__right {
-        position: absolute;
-        z-index: 2;
         right: 177px;
-        top: 57%;
-        @include square(53px);
+        left:auto;
         background: url("../img/client-right-arrow.png") no-repeat center center;
     }
 }
@@ -425,6 +423,9 @@ input:focus::placeholder, textarea:focus::placeholder {
     color: #fff;
 }
 
+.padding {
+    padding:38px 0;
+}
 // animation----------------
 
 @keyframes moveUp {
