@@ -1,18 +1,55 @@
-@mixin absolute ($top:null, $right:null, $bottom:null, $left:null) {
-    position: absolute;
-    top:$top;
-    right:$right;
-    bottom:$bottom;
-    left:$left;
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
 }
 
-@mixin square ($value) {
-    width: $value;
-    height: $value;
+@mixin square($value) {
+  width: $value;
+  height: $value;
 }
 
-@mixin fit ($value:cover) {
-    object-fit:$value;
-    -moz-object-fit:$value;
-    -webkit-object-fit:$value;
+@mixin fit($value: cover) {
+  object-fit: $value;
+  -moz-object-fit: $value;
+  -webkit-object-fit: $value;
+}
+@mixin title {
+  font-size: 26px;
+  color: $color7;
+  line-height: 0.769;
+  font-weight: 400;
+}
+@mixin social($value) {
+  width: $value;
+  height: $value;
+  line-height: $value;
+  text-align: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
+}
+%message-shared {
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+}
+@mixin list($value) {
+  width: $value;
+  height: $value;
+  border-radius: 50%;
+  background-color: $color1;
+}
+@mixin pagination($value) {
+  width: $value;
+  height: $value;
+  line-height: $value;
+  border-radius: 50%;
+  background-color: rgb(246, 250, 251);
+  text-align: center;
+  font-size: 23px;
+  color: rgb(186, 186, 186);
 }
