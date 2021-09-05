@@ -293,7 +293,8 @@ body {
         z-index: 2;
         left: 177px;
         top: 57%;
-        @include square(53px);
+        width: 14px;
+        height: 26px;
         background: url("../img/client-left-arrow.png") no-repeat center center;
     }
     &-arrow__right {
@@ -301,7 +302,8 @@ body {
         z-index: 2;
         right: 177px;
         top: 57%;
-        @include square(53px);
+        width: 14px;
+        height: 26px;
         background: url("../img/client-right-arrow.png") no-repeat center center;
     }
 }
