@@ -265,7 +265,7 @@ body {
 }
 
 .clients {
-    padding: 90px 0;
+    padding: 105px 0;
     position: relative;
     &-comment {
         width: 90%;
@@ -341,6 +341,9 @@ body {
     padding: 50px 0;
 }
 
+.padding {
+    padding:38px 0;
+}
 // animation----------------
 
 @keyframes moveUp {
