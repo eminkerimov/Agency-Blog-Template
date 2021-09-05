@@ -229,23 +229,23 @@ body {
             }
         }
         li:nth-of-type(2) {
-                font-size: 20px;
-                color: rgb(72, 84, 96);
-                line-height: 2.4;
-                background-color: #f8f9fb;   
-                padding: 11px 0;
+            font-size: 20px;
+            color: rgb(72, 84, 96);
+            line-height: 2.4;
+            background-color: #f8f9fb;
+            padding: 11px 0;
         }
         li:last-of-type {
             line-height: 1;
             padding: 30px 0;
-            background-color: #f8f9fb; 
+            background-color: #f8f9fb;
             button {
-                    font-size: 17px;
-                    font-weight:600;
-                    color: rgb(255, 255, 255);
-                    background-color: #788492;
-                    padding: 9px 50px 12px;
-                    border-radius: 3px;
+                font-size: 17px;
+                font-weight: 600;
+                color: rgb(255, 255, 255);
+                background-color: #788492;
+                padding: 9px 50px 12px;
+                border-radius: 3px;
             }
         }
         &:hover li:first-of-type {
@@ -261,6 +261,48 @@ body {
             box-shadow: 0 2px 30px rgb(0 0 0 / 20%);
             transform: scale(1.02);
         }
+    }
+}
+
+.clients {
+    padding: 90px 0;
+    position: relative;
+    &-comment {
+        width: 90%;
+        margin: 0 auto;
+        &__item {
+            text-align: center;
+            &-text {
+                font-size: 19px;
+                color: rgb(78, 82, 93);
+                line-height: 1.579;
+                width: 650px;
+                margin: 0 auto;
+            }
+            &-name {
+                display: block;
+                font-size: 21px;
+                color: #9a8faf;
+                margin-top: 31px;
+                line-height: 1.15;
+            }
+        }
+    }
+    &-arrow__left {
+        position: absolute;
+        z-index: 2;
+        left: 177px;
+        top: 57%;
+        @include square(53px);
+        background: url("../img/client-left-arrow.png") no-repeat center center;
+    }
+    &-arrow__right {
+        position: absolute;
+        z-index: 2;
+        right: 177px;
+        top: 57%;
+        @include square(53px);
+        background: url("../img/client-right-arrow.png") no-repeat center center;
     }
 }
 
