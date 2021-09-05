@@ -308,7 +308,7 @@ body {
 
 .contact {
     padding: 45px 0 100px;
-    background: url("../img/Layer28.png") no-repeat center center / cover;
+    background: url("../img/Layer28.png") $dark_gray no-repeat center center / cover;
     h3 {
         margin-top: 63px;
         font-size: 24px;
@@ -336,10 +336,8 @@ body {
             outline: none;
         }
         input {
-            width: 270px;
             border-radius: 3px;
             font-size: 16px;
-            color: rgb(193, 193, 193);
             line-height: 1.5;
             text-align: left;
             margin: 0 25px 30px 0;
@@ -355,7 +353,6 @@ body {
             height: 180px;
             border-radius: 3px;
             font-size: 16px;
-            color: rgb(193, 193, 193);
             line-height: 1.5;
             text-align: left;
         }
@@ -378,6 +375,15 @@ body {
             }
         }
     }
+}
+
+input::placeholder, textarea::placeholder {
+    color: rgb(193, 193, 193);
+    transition: .2s all;
+}
+
+input:focus::placeholder, textarea:focus::placeholder {
+    color: transparent;
 }
 
 // component scss-------------
