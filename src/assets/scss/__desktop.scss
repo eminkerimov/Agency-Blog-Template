@@ -306,6 +306,78 @@ body {
     }
 }
 
+.contact {
+    padding: 145px 0 100px;
+    background: url("../img/Layer28.png") no-repeat center center / cover;
+    h3 {
+        font-size: 24px;
+        color: rgb(255, 255, 255);
+        text-align: left;
+    }
+    span {
+        display: block;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.502);
+        line-height: 1.5;
+        text-align: left;
+        padding: 5px 50px 20px 0;
+    }
+    a {
+        font-size: 14px;
+        color: rgb(191, 172, 226);
+        line-height: 1.714;
+        text-align: left;
+        display: block;
+    }
+    form {
+        & *:focus-visible {
+            outline: none;
+        }
+        input {
+            width: 270px;
+            border-radius: 3px;
+            font-size: 16px;
+            color: rgb(193, 193, 193);
+            line-height: 1.5;
+            text-align: left;
+            margin: 0 25px 30px 0;
+            padding: 10px 20px;
+            border: none;
+            &:nth-of-type(2) {
+                margin-right:0;
+            }
+        }
+        textarea {
+            padding: 15px 20px;
+            width: 100%;
+            height: 180px;
+            border-radius: 3px;
+            font-size: 16px;
+            color: rgb(193, 193, 193);
+            line-height: 1.5;
+            text-align: left;
+        }
+        button {
+            font-size: 22px;
+            color: #fff;
+            line-height: 1.147;
+            text-align: center;
+            padding: 10px 56px;
+            background: $color1;
+            border-radius: 4px;
+            border: 3px solid transparent;
+            transition: 0.3s;
+            float: right;
+            margin-top: 30px;
+            &:hover {
+                color: $color1;
+                border: 3px solid $color1;
+                background-color: #fff;
+            }
+        }
+    }
+}
+
 // component scss-------------
 
 .section-item {
@@ -339,6 +411,10 @@ body {
     text-align: center;
     display: block;
     padding: 50px 0;
+}
+
+.white {
+    color: #fff;
 }
 
 // animation----------------
