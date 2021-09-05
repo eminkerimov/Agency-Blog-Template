@@ -307,9 +307,10 @@ body {
 }
 
 .contact {
-    padding: 145px 0 100px;
+    padding: 45px 0 100px;
     background: url("../img/Layer28.png") no-repeat center center / cover;
     h3 {
+        margin-top: 63px;
         font-size: 24px;
         color: rgb(255, 255, 255);
         text-align: left;
@@ -330,6 +331,7 @@ body {
         display: block;
     }
     form {
+        margin-top: 63px;
         & *:focus-visible {
             outline: none;
         }
