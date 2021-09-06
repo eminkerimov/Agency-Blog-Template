@@ -53,3 +53,9 @@
   font-size: 23px;
   color: rgb(186, 186, 186);
 }
+@mixin post($value){
+  margin-right:$value;
+  margin-left: $value;
+  color: $color7;
+  font-size: 20px;
+}
