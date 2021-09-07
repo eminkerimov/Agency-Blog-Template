@@ -131,20 +131,116 @@
       @include post(14px);
     }
   }
-  &__recent{
-    & li{
+  &__recent {
+    & li {
       font-size: 14px;
+      color: $color7;
+      line-height: 2.571;
+      margin-left: 8px;
+      display: flex;
+      align-items: center;
+      &::before {
+        content: "";
+        display: block;
+        @include list(6px);
+        margin-right: 20px;
+      }
+    }
+  }
+}
+.blog-comment {
+  & h2 {
+    margin-top: 37px;
+    margin-bottom: 35px;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:nth-child(2) {
+      margin-bottom: 34px;
+    }
+    &:nth-child(3) {
+      border-top: 1px solid $color11;
+      border-bottom: 1px solid $color11;
+      padding-top: 24px;
+      padding-bottom: 37px;
+    }
+    &:nth-child(4) {
+      padding-left: 114px;
+      margin-top: 40px;
+    }
+    & .profile-img {
+      width: 93px;
+      overflow: hidden;
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    & .user-name {
+      width: calc(100% - 93px);
+      padding-left: 30px;
+      & strong {
+        display: inline-block;
+        font-size: 14px;
         color: $color7;
         line-height: 2.571;
-        margin-left: 8px;
-        display: flex;
-        align-items: center;
-        &::before {
-          content: "";
-          display: block;
-          @include list(6px);
-          margin-right: 20px;
-        }
+        margin-bottom: 7px;
+        margin-right: 14px;
+      }
+      & a {
+        font-size: 14px;
+        color: $color8;
+      }
+      & p {
+        font-size: 14px;
+        color: $color4;
+        line-height: 1.714;
+      }
     }
+  }
+}
+.blog-inner__form{
+  margin-top: 70px;
+  margin-bottom: 34px;
+  & h2{
+    margin-bottom:15px;
+  }
+  & input[type=text],[type=email]{
+    height:47px;
+    @include inner-form;
+    margin-bottom: 25px;
+  }
+  & textarea{
+    @include inner-form;
+    height: 218px;
+    width: 100%;
+    resize: none;
+    box-shadow: 0 0 5px 0 #a88fd8;
+    margin-bottom: 31px;
+  }
+  & input[type=checkbox]{
+    width:2rem;
+    height: 2rem;
+    margin-right: 15px;
+  }
+  & label{
+    font-size: 14px;
+    line-height: 2.571;
+    color: $color4;
+  }
+  & button{
+    float: right;
+    @include inner-button;
+    @extend %message-shared;
+    &:hover{
+      background-color: $color2;
+    }
+  }
+  & .form-flex{
+    display: flex;
+    align-items: center;
   }
 }

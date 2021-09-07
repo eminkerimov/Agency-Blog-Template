@@ -53,9 +53,29 @@
   font-size: 23px;
   color: rgb(186, 186, 186);
 }
-@mixin post($value){
-  margin-right:$value;
+@mixin post($value) {
+  margin-right: $value;
   margin-left: $value;
   color: $color7;
   font-size: 20px;
+}
+@mixin profile($value) {
+  width: $value;
+  height: $value;
+  border-radius: 50%;
+}
+
+@mixin inner-form{
+  outline: none;
+  padding-left: 14px;
+  border-radius: 3px;
+  border: 1px solid $color11;
+}
+@mixin inner-button{
+  font-size: 16px;
+  line-height: 1.5;
+  color: white;
+  background-color: $color1;
+  padding: 10px 66px;
+  border-radius: 3px;
 }
