@@ -68,45 +68,51 @@
 .blog-inner__share {
   padding-top: 94px;
   & fieldset {
-    padding: 34px 200px;
+    padding-top: 34px;
+    padding-bottom: 34px;
     border: 1px groove #ddd;
     & legend {
       text-align: center;
       font-size: 23px;
       color: $color7;
+      width: auto;
+      padding: 0px 34px;
     }
-    & ul li {
-      display: inline-block;
-      font-size: 13px;
-      & a {
-        display: block;
-        padding: 2px 3px;
-        border: 1px solid $color11;
+    & ul {
+      text-align: center;
+      li {
+        display: inline-block;
         font-size: 13px;
-        background-color: #e5e5e5;
-        border-radius: 3px;
-        & i {
-          margin-right: 2px;
+        & a {
+          display: block;
+          padding: 2px 3px;
+          border: 1px solid $color11;
+          font-size: 13px;
+          background-color: #e5e5e5;
+          border-radius: 3px;
+          & i {
+            margin-right: 2px;
+          }
         }
-      }
-      &:first-child i {
-        color: $color1;
-      }
-      &:nth-child(3)i {
-        color: $colorFace;
-      }
-      &:nth-child(5)i {
-        color: $colorGoogle;
-      }
-      &:nth-child(1) {
-        font-weight: bold;
-      }
-      &:nth-child(3) {
-        margin-left: 30px;
-        color: $colorFace;
-      }
-      &:nth-child(4) {
-        margin-right: 30px;
+        &:first-child i {
+          color: $color1;
+        }
+        &:nth-child(3)i {
+          color: $colorFace;
+        }
+        &:nth-child(5)i {
+          color: $colorGoogle;
+        }
+        &:nth-child(1) {
+          font-weight: bold;
+        }
+        &:nth-child(3) {
+          margin-left: 30px;
+          color: $colorFace;
+        }
+        &:nth-child(4) {
+          margin-right: 30px;
+        }
       }
     }
   }
