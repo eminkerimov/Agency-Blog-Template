@@ -10,4 +10,14 @@ $(document).ready(function () {
         nextArrow: $('.slider-arrow__right'),
         fade: true,
     });
+    $('.clients-comment').slick({
+        arrows: true,
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        speed: 2000,
+        autoplaySpeed: 2500,
+        prevArrow: $('.clients-arrow__left'),
+        nextArrow: $('.clients-arrow__right'),
+    });
 });

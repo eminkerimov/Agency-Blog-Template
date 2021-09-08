@@ -16,6 +16,12 @@
   -moz-object-fit: $value;
   -webkit-object-fit: $value;
 }
+@mixin coverImage (){
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+};
+
 @mixin title {
   font-size: 26px;
   color: $color7;
@@ -30,7 +36,7 @@
   transition: all 0.2s ease;
   box-shadow: 0 5px 4px rgba(0, 0, 0, 0.5);
 }
-%message-shared {
+%transition {
   transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
