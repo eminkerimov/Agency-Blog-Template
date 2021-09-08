@@ -5,22 +5,20 @@
 
 <!-- Main -->
 <section class="slider">
-    <div class="slider-img">
-        <div class="slider-img-item"><img src="./assets/img/slider1.png" alt="slider"></div>
-        <div class="slider-img-item"><img src="./assets/img/slider2.jpg" alt="slider"></div>
-        <div class="slider-img-item"><img src="./assets/img/slider3.jpg" alt="slider"></div>
-        <div class="slider-img-item"><img src="./assets/img/slider4.jpg" alt="slider"></div>
+    <div class="slider-list">
+        <div class="slider-list__item"><img src="./assets/img/slider1.png" alt="slider"></div>
+        <div class="slider-list__item"><img src="./assets/img/slider2.jpg" alt="slider"></div>
+        <div class="slider-list__item"><img src="./assets/img/slider3.jpg" alt="slider"></div>
+        <div class="slider-list__item"><img src="./assets/img/slider4.jpg" alt="slider"></div>
     </div>
     <div class="slider-content">
         <h1>This is a main heading</h1>
         <span>Lorem Ipsum is simply dummy text of the printing</span>
         <a href="#">Learn More</a>
     </div>
-    <button class="slider-arrow-left">
-        <a href="#"></a>
+    <button class="slider-arrow__left">
     </button>
-    <button class="slider-arrow-right">
-        <a href="#"></a>
+    <button class="slider-arrow__right">
     </button>
 </section>
 
@@ -28,46 +26,44 @@
     <div class="container">
         <div class="row">
             <div class="col-3">
-                <div class="services-item">
-                    <span>
-                        <i class="fa fa-rocket" aria-hidden="true"></i>
-                    </span>
-                    <span>Custom Designs</span>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                    </p>
+                <div class="section-item">
+                    <i class="fa fa-rocket" aria-hidden="true"></i>
+                    <h1 class="section-item__name">Custom Designs</h1>
+                    <p class="section-item__text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been</p>
                     <a href="#">Read More</a>
                 </div>
             </div>
             <div class="col-3">
-                <div class="services-item">
+                <div class="section-item">
                     <span>
                         <i class="fa fa-desktop" aria-hidden="true"></i>
                     </span>
-                    <span>Web Design</span>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                    </p>
+                    <h1 class="section-item__name">Web Design</h1>
+                    <p class="section-item__text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been</p>
                     <a href="#">Read More</a>
                 </div>
             </div>
             <div class="col-3">
-                <div class="services-item">
+                <div class="section-item">
                     <span>
                         <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
                     </span>
-                    <span>Blog Pages</span>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                    </p>
+                    <h1 class="section-item__name">Blog Pages</h1>
+                    <p class="section-item__text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been</p>
                     <a href="#">Read More</a>
                 </div>
             </div>
             <div class="col-3">
-                <div class="services-item">
+                <div class="section-item">
                     <span>
                         <i class="fa fa-mobile" aria-hidden="true"></i>
                     </span>
-                    <span>Mobile Friendly</span>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                    </p>
+                    <h1 class="section-item__name">Mobile Friendly</h1>
+                    <p class="section-item__text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been</p>
                     <a href="#">Read More</a>
                 </div>
             </div>
@@ -77,25 +73,25 @@
 
 <section class="portfolio">
     <div class="container">
-        <span class="section-title">Portfolio</span>
-        <div class="row portfolio-images">
+        <h2 class="section-title">Portfolio</h2>
+        <div class="row">
             <div class="col-4">
-                <a href="#"><img src="./assets/img/Layer6.png" alt="image1"></a>
+                <a class="portfolio-item" href="#"><img src="./assets/img/Layer6.png" alt="image1"></a>
             </div>
             <div class="col-4">
-                <a href="#"><img src="./assets/img/Layer7.png" alt="image1"></a>
+                <a class="portfolio-item" href="#"><img src="./assets/img/Layer7.png" alt="image1"></a>
             </div>
             <div class="col-4">
-                <a href="#"><img src="./assets/img/Layer8.png" alt="image1"></a>
+                <a class="portfolio-item" href="#"><img src="./assets/img/Layer8.png" alt="image1"></a>
             </div>
             <div class="col-4">
-                <a href="#"><img src="./assets/img/Layer9.png" alt="image1"></a>
+                <a class="portfolio-item" href="#"><img src="./assets/img/Layer9.png" alt="image1"></a>
             </div>
             <div class="col-4">
-                <a href="#"><img src="./assets/img/Layer10.png" alt="image1"></a>
+                <a class="portfolio-item" href="#"><img src="./assets/img/Layer10.png" alt="image1"></a>
             </div>
             <div class="col-4">
-                <a href="#"><img src="./assets/img/Layer11.png" alt="image1"></a>
+                <a class="portfolio-item" href="#"><img src="./assets/img/Layer11.png" alt="image1"></a>
             </div>
         </div>
         <a class="portfolio-link" href="#">See all works</a>
@@ -111,7 +107,7 @@
                 <div class="section-item">
                     <a href="#">
                         <img src="./assets/img/teammember1.jpg" alt="team">
-                        <p>+</p>
+                        <span>+</span>
                     </a>
                     <h2 class="section-item__name">Adrian Thomas</h2>
                     <span class="section-item__position">CEO & Founder</span>
@@ -123,7 +119,7 @@
                 <div class="section-item">
                     <a href="#">
                         <img src="./assets/img/teammember4.jpg" alt="team">
-                        <p>+</p>
+                        <span>+</span>
                     </a>
                     <h2 class="section-item__name">Narate Ketram</h2>
                     <span class="section-item__position">Creative Director</span>
@@ -135,7 +131,7 @@
                 <div class="section-item">
                     <a href="#">
                         <img src="./assets/img/teammember2.jpg" alt="team">
-                        <p>+</p>
+                        <span>+</span>
                     </a>
                     <h2 class="section-item__name">Fernando Comet</h2>
                     <span class="section-item__position">CEO & Founder</span>
@@ -147,7 +143,7 @@
                 <div class="section-item">
                     <a href="#">
                         <img src="./assets/img/teammember3.jpg" alt="team">
-                        <p>+</p>
+                        <span>+</span>
                     </a>
                     <h2 class="section-item__name">Adedayo Saheed</h2>
                     <span class="section-item__position">Creative Director</span>
@@ -160,7 +156,53 @@
 </section>
 
 
-<section class="tariffs"></section>
+<section class="tariffs">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <ul class="tariffs-item">
+                    <li><h2>Basic</h2></li>
+                    <li>$5.01/ Month</li>
+                    <li>Lorem ipsum </li>
+                    <li>Dolor sit amet, consect</li>
+                    <li>Adipiscing elit</li>
+                    <li>Proin commodo turpis</li>
+                    <li>lacus pulvinarvel </li>
+                    <li>Prnare nisi pretium.</li>
+                    <li><button>Buy now</button></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <ul class="tariffs-item">
+                    <li><h2>Pro</h2></li>
+                    <li>$10.01/ Month</li>
+                    <li>Lorem ipsum </li>
+                    <li>Dolor sit amet, consect</li>
+                    <li>Adipiscing elit</li>
+                    <li>Proin commodo turpis</li>
+                    <li>lacus pulvinarvel </li>
+                    <li>Prnare nisi pretium.</li>
+                    <li><button>Buy now</button></li>
+                </ul>
+            </div>
+            <div class="col-4">
+                <ul class="tariffs-item">
+                    <li><h2>Premium</h2></li>
+                    <li>$20.01/ Month</li>
+                    <li>Lorem ipsum </li>
+                    <li>Dolor sit amet, consect</li>
+                    <li>Adipiscing elit</li>
+                    <li>Proin commodo turpis</li>
+                    <li>lacus pulvinarvel </li>
+                    <li>Prnare nisi pretium.</li>
+                    <li><button>Buy now</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <section class="clients"></section>
 <section class="contact"></section>
 <!-- Main end -->
