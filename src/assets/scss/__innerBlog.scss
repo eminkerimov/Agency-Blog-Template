@@ -78,63 +78,50 @@
       width: auto;
       padding: 0px 34px;
     }
-    & ul {
-      text-align: center;
-      li {
+    & ul{
+      display: flex;
+      justify-content:center;
+      align-items: center;
+      & li{
         display: inline-block;
-        font-size: 13px;
-        & a {
-          display: block;
-          padding: 2px 3px;
-          border: 1px solid $color11;
-          font-size: 13px;
-          background-color: #e5e5e5;
-          border-radius: 3px;
-          & i {
-            margin-right: 2px;
-          }
-        }
-        &:first-child i {
-          color: $color1;
-        }
-        &:nth-child(3)i {
-          color: $colorFace;
-        }
-        &:nth-child(5)i {
-          color: $colorGoogle;
-        }
-        &:nth-child(1) {
-          font-weight: bold;
-        }
-        &:nth-child(3) {
-          margin-left: 30px;
-          color: $colorFace;
-        }
-        &:nth-child(4) {
-          margin-right: 30px;
-        }
+      }
+      & li:first-child{
+        margin-right: 10px;
+      }
+      & li:nth-child(2){
+        font-size: 14px;
+      }
+      & li:nth-child(3){
+        margin-left: 32px;
+        margin-right: 10px;
+      }
+      & li:nth-child(4){
+        font-size: 14px;
       }
     }
   }
 }
 .inner-post {
   &__pagination {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 55px;
-    margin-bottom: 52px;
-    .post a {
-      display: inline-block;
-      @include pagination(49px);
-      @extend %message-shared;
-      &:hover {
-        background-color: $color4;
-        color: white;
+    & .post {
+      margin-top: 55px;
+      margin-bottom: 52px;
+      @include d-flex;
+      & a {
+        display: block;
+        @include d-flex;
       }
-    }
-    & span {
-      @include post(14px);
+      & .previous {
+        background: url(../img/client-left-arrow.png);
+        @include pagination-post(49px);
+      }
+      & .next{
+        background: url(../img/client-right-arrow.png);
+        @include pagination-post(49px);
+      }
+      & span {
+        @include post(14px);
+      }
     }
   }
   &__recent {
@@ -160,9 +147,7 @@
     margin-bottom: 35px;
   }
   &__content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include d-flex;
     &:nth-child(2) {
       margin-bottom: 34px;
     }
@@ -178,6 +163,7 @@
     }
     & .profile-img {
       width: 93px;
+      height: 93px;
       overflow: hidden;
       & img {
         width: 100%;
@@ -208,45 +194,73 @@
     }
   }
 }
-.blog-inner__form{
+.blog-inner__form {
   margin-top: 70px;
   margin-bottom: 34px;
-  & h2{
-    margin-bottom:15px;
+  & h2 {
+    margin-bottom: 15px;
   }
-  & input[type=text],[type=email]{
-    height:47px;
+  & input[type="text"],
+  [type="email"] {
+    height: 47px;
     @include inner-form;
     margin-bottom: 25px;
   }
-  & textarea{
-    @include inner-form;
+  & textarea {
+    outline: none;
+    padding-left: 20px;
+    padding-top: 26px;
     height: 218px;
     width: 100%;
     resize: none;
-    box-shadow: 0 0 5px 0 #a88fd8;
+    border:1px solid #a88fd8;
+    box-shadow: 0px 0px 5px 0px #a88fd8;
     margin-bottom: 31px;
-  }
-  & input[type=checkbox]{
-    width:2rem;
-    height: 2rem;
+    border-radius: 3px;
+}
+  & input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 33px;
+    height: 33px;
+    border: 1px solid #ebebeb;
     margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend%transition;
+    border-radius: 3px;
+    outline: none;
+    &::before{
+      content: "\f00c";
+      font-family: 'FontAwesome';
+      font-size:18px;
+      color: white;
+      display: none;
+    }
+    &:checked{
+      background-color:#0075FF;
+    }
+    &:checked::before{
+      display: block;
+    }
   }
-  & label{
+  & label {
     font-size: 14px;
     line-height: 2.571;
     color: $color4;
   }
-  & button{
+  & button {
     float: right;
     @include inner-button;
-    @extend %message-shared;
-    &:hover{
+    @extend %transition;
+    &:hover {
       background-color: $color2;
     }
   }
-  & .form-flex{
+  & .form-flex {
     display: flex;
     align-items: center;
   }
 }
+

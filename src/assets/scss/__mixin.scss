@@ -49,6 +49,14 @@
   border-radius: 50%;
   background-color: $color1;
 }
+@mixin pagination-post($value){
+  width: $value;
+  height: $value;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  background-color: rgb(246, 250, 251);
+}
 @mixin pagination($value) {
   width: $value;
   height: $value;
@@ -84,4 +92,9 @@
   background-color: $color1;
   padding: 10px 66px;
   border-radius: 3px;
+}
+@mixin d-flex{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
 }
