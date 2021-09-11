@@ -18,6 +18,7 @@
   }
   & .blog-item__content {
     margin-top: 6px;
+    width: calc(100% - 71px);
     & h2 {
       font-family: "Roboto";
       font-size: 26px;
