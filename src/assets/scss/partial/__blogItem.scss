@@ -1,7 +1,7 @@
 .blog-section {
   padding-top: 75px;
   & .blog-item {
-    display: flex;
+    @include flex();
     padding-right: 40px;
     margin-bottom: 80px;
   }
