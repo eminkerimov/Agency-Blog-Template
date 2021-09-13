@@ -16,11 +16,11 @@
   -moz-object-fit: $value;
   -webkit-object-fit: $value;
 }
-@mixin coverImage (){
+@mixin coverImage() {
   width: 100%;
   height: 100%;
   object-fit: cover;
-};
+}
 
 @mixin title {
   font-size: 26px;
@@ -43,15 +43,37 @@
   -ms-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
 }
+@mixin flex() {
+  display: flex;
+}
 @mixin list($value) {
   width: $value;
   height: $value;
   border-radius: 50%;
   background-color: $color1;
 }
-@mixin pagination-post($value){
+
+@mixin flex-ai-center {
+  @include flex();
+  align-items: center;
+}
+
+@mixin flex-js-center {
+  @include flex();
+  justify-content: center;
+}
+
+@mixin flex-center {
+  @include flex-js-center();
+  @include flex-ai-center();
+}
+
+@mixin pagination-post($value) {
+  content: "";
   width: $value;
   height: $value;
+  display: inline-block;
+  vertical-align: middle;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
@@ -79,13 +101,13 @@
   border-radius: 50%;
 }
 
-@mixin inner-form{
+@mixin inner-form {
   outline: none;
   padding-left: 14px;
   border-radius: 3px;
   border: 1px solid $color11;
 }
-@mixin inner-button{
+@mixin inner-button {
   font-size: 16px;
   line-height: 1.5;
   color: white;
@@ -93,8 +115,8 @@
   padding: 10px 66px;
   border-radius: 3px;
 }
-@mixin d-flex{
+@mixin d-flex {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
 }
