@@ -35,8 +35,7 @@
       }
     }
     &__flex {
-      display: flex;
-      justify-content: space-between;
+      @include flex-js-between;
     }
     &__text {
       width: calc(100% - 270px);

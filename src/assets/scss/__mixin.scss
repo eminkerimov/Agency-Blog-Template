@@ -57,7 +57,10 @@
   @include flex();
   align-items: center;
 }
-
+@mixin flex-js-between{
+  @include flex();
+  justify-content: space-between
+}
 @mixin flex-js-center {
   @include flex();
   justify-content: center;
@@ -90,12 +93,6 @@
   font-size: 23px;
   color: rgb(186, 186, 186);
 }
-@mixin profile($value) {
-  width: $value;
-  height: $value;
-  border-radius: 50%;
-}
-
 @mixin inner-form {
   outline: none;
   padding-left: 14px;
@@ -109,11 +106,6 @@
   background-color: $color1;
   padding: 10px 66px;
   border-radius: 3px;
-}
-@mixin d-flex {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 @mixin blog-item-info {
   width: 71px;
