@@ -69,15 +69,16 @@
 }
 
 @mixin pagination-post($value) {
-  content: "";
   width: $value;
   height: $value;
   display: inline-block;
-  vertical-align: middle;
-  background-repeat: no-repeat;
-  background-position: center;
+  text-align: center;
+  line-height: 49px;
+  font-size: 23px;
   border-radius: 50%;
   background-color: rgb(246, 250, 251);
+  @extend %transition;
+  color: rgb(186, 186, 186);
 }
 @mixin pagination($value) {
   width: $value;
@@ -88,12 +89,6 @@
   text-align: center;
   font-size: 23px;
   color: rgb(186, 186, 186);
-}
-@mixin post($value) {
-  margin-right: $value;
-  margin-left: $value;
-  color: $color7;
-  font-size: 20px;
 }
 @mixin profile($value) {
   width: $value;
