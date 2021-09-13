@@ -110,14 +110,22 @@
         margin-right: 13px;
         background: url(../img/client-left-arrow.png);
         @include pagination-post(49px);
+        @extend %transition;
       }
       & .next:after{
         margin-left: 13px;
         background: url(../img/client-right-arrow.png);
         @include pagination-post(49px);
+        @extend %transition;
       }
       & span {
         @include post(14px);
+      }
+      & a:hover .previous,& a:hover .next{
+        background-color:$color4;
+      }
+      & a:hover span{
+        color:$color5;
       }
   }
   &__recent {
@@ -231,7 +239,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @extend%transition;
+    @extend %transition;
     border-radius: 3px;
     outline: none;
     &::before{
@@ -252,6 +260,7 @@
     font-size: 14px;
     line-height: 2.571;
     color: $color4;
+    user-select: none;
   }
   & button {
     float: right;

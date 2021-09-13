@@ -120,3 +120,26 @@
   justify-content: space-between;
   align-items: center;
 }
+@mixin blog-item-info {
+  width: 71px;
+  height: 103px;
+  border-radius: 3px;
+  background-color: $color1;
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+  margin-right: 30px;
+}
+@mixin blog-item-content-img($value){
+  width: $value;
+  height: $value;
+  object-fit: cover;
+}
+@mixin blog-content__social{
+   border-top: 1px solid $color9;
+  border-bottom: 1px solid $color9;
+  padding: 8px 0;
+  margin-top: 26px;
+}
