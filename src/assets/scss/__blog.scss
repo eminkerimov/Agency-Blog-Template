@@ -1,6 +1,6 @@
 /* cover-section start */
 .cover {
-   background: url('../img/Layer4-blog.png') no-repeat center center/cover;
+  background: url("../img/Layer4-blog.png") no-repeat center center/cover;
   height: 174px;
   h1 {
     font-size: 42px;
@@ -60,7 +60,7 @@
             transform: translate(0, -5px);
           }
         }
-        & .social-fb{
+        & .social-fb {
           background-color: $colorFace;
         }
         & .social-tw {
@@ -218,4 +218,103 @@
       }
     }
   }
+}
+
+/* blog scss responsive */
+@media only screen and (max-width: 1199px) {
+  .blog-right {
+    & input,
+    input[type="email"] {
+      height: 35px;
+    }
+    &::before {
+      line-height: 40px;
+    }
+    & .blog-form-social {
+      margin-top: 25px;
+    }
+    & .title {
+      font-size: 24px;
+    }
+    & .blog-form-social ul {
+      margin-top: 25px;
+      margin-bottom: 30px;
+    }
+    & .blog-btn {
+      margin-top: 25px;
+      margin-bottom: 35px;
+      padding: 10px 40px;
+    }
+    & .blog-categories ul{
+      margin-bottom: 20px;
+      & li a{
+        font-size: 12px;
+        line-height: 1.5;
+        &::before{
+          margin-right: 15px;
+        }
+      }
+      & li:hover a{
+        margin-left: 10px;
+      }
+    }
+    & .blog-post-img{
+      margin: 25px 0;
+    }
+    & .blog-post p{
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    & .blog-post .blog-date{
+      margin-bottom: 20px;
+    }
+    & .blog-post-recent ul{
+      margin-bottom: 20px;
+      & li{
+        font-size: 12px;
+        line-height: 1.5;
+      }
+    }
+    & .blog-post .blog-tag-list{
+      margin-top: 25px;
+      & a{
+        padding: 0 10px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 991px) {
+  .blog-right{
+    & .title{
+      font-size: 20px;
+    }
+    & .blog-form-social ul li{
+      margin-right:5px;
+      & a{
+        width: 35px;
+        height: 35px;
+      }
+    }
+    & .blog-post .blog-date span {
+      font-size: 12px;
+    }
+    & .blog-post .blog-date a {
+      font-size: 12px;
+    }
+    & .blog-post p{
+      font-size: 12px;
+    }
+    & .blog-post-recent ul li{
+      font-size: 11px;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .blog-right{
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 550px) {
 }
