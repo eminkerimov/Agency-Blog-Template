@@ -37,9 +37,7 @@
     margin-top: 32px;
     margin-bottom: 38px;
     & img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+     @include coverImage;
     }
   }
   & blockquote {
@@ -78,24 +76,22 @@
       width: auto;
       padding: 0px 34px;
     }
-    & ul{
-      display: flex;
-      justify-content:center;
-      align-items: center;
-      & li{
+    & ul {
+      @include flex-center;
+      & li {
         display: inline-block;
       }
-      & li:first-child{
+      & li:first-child {
         margin-right: 10px;
       }
-      & li:nth-child(2){
+      & li:nth-child(2) {
         font-size: 14px;
       }
-      & li:nth-child(3){
+      & li:nth-child(3) {
         margin-left: 32px;
         margin-right: 10px;
       }
-      & li:nth-child(4){
+      & li:nth-child(4) {
         font-size: 14px;
       }
     }
@@ -103,30 +99,37 @@
 }
 .inner-post {
   &__pagination {
-      margin-top: 55px;
-      margin-bottom: 52px;
-      @include d-flex;
-      & .previous:before {
-        margin-right: 13px;
-        background: url(../img/client-left-arrow.png);
-        @include pagination-post(49px);
-        @extend %transition;
+    margin-top: 55px;
+    margin-bottom: 52px;
+    @include flex-js-between;
+    & .previous:before {
+      font-family: "FontAwesome";
+      content: "\f104";
+      margin-right: 13px;
+      @include pagination-post(49px);
+    }
+    & .previous,
+    & .next {
+      color: $color7;
+      font-size: 20px;
+      &:hover {
+        color: $color5;
       }
-      & .next:after{
-        margin-left: 13px;
-        background: url(../img/client-right-arrow.png);
-        @include pagination-post(49px);
-        @extend %transition;
-      }
-      & span {
-        @include post(14px);
-      }
-      & a:hover .previous,& a:hover .next{
-        background-color:$color4;
-      }
-      & a:hover span{
-        color:$color5;
-      }
+    }
+    & .next:after {
+      font-family: "FontAwesome";
+      content: "\f105";
+      margin-left: 13px;
+      @include pagination-post(49px);
+    }
+    & .previous:hover::before {
+      background-color: $color4;
+      color: white;
+    }
+    & .next:hover::after {
+      background-color: $color4;
+      color: white;
+    }
   }
   &__recent {
     & li {
@@ -151,28 +154,20 @@
     margin-bottom: 35px;
   }
   &__content {
-    @include d-flex;
-    // &:nth-child(2) {
-    //   margin-bottom: 34px;
-    // }
-    // &:nth-child(3) {
-      border-top: 1px solid $color11;
-      // border-bottom: 1px solid $color11;
-      padding-top: 24px;
-      padding-bottom: 37px;
-    // }
+    @include flex-js-between;
+    border-top: 1px solid $color11;
+    padding-top: 24px;
+    padding-bottom: 37px;
     &.reply {
       padding-left: 114px;
       margin-top: 40px;
     }
     & .profile-img {
-      width: 93px;
-      height: 93px;
       overflow: hidden;
+      border-radius: 50%;
+      @include square(93px);
       & img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        @include coverImage;
       }
     }
     & .user-name {
@@ -210,7 +205,7 @@
     @include inner-form;
     margin-bottom: 25px;
     &:focus {
-      border:1px solid #a88fd8;
+      border: 1px solid #a88fd8;
       box-shadow: 0px 0px 5px 0px #a88fd8;
     }
   }
@@ -223,36 +218,31 @@
     resize: none;
     margin-bottom: 31px;
     border-radius: 3px;
-    border:1px solid $color11;
+    border: 1px solid $color11;
     &:focus {
-      border:1px solid #a88fd8;
+      border: 1px solid #a88fd8;
       box-shadow: 0px 0px 5px 0px #a88fd8;
     }
-}
+  }
   & input[type="checkbox"] {
-    appearance: none;
-    -webkit-appearance: none;
-    width: 33px;
-    height: 33px;
+    @include square(33px);
     border: 1px solid #ebebeb;
     margin-right: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @extend %transition;
+    @include flex-center;
+    @extend%transition;
     border-radius: 3px;
     outline: none;
-    &::before{
+    &::before {
       content: "\f00c";
-      font-family: 'FontAwesome';
-      font-size:18px;
+      font-family: "FontAwesome";
+      font-size: 18px;
       color: white;
       display: none;
     }
-    &:checked{
-      background-color:#0075FF;
+    &:checked {
+      background-color: #0075ff;
     }
-    &:checked::before{
+    &:checked::before {
       display: block;
     }
   }
@@ -274,4 +264,3 @@
     @include flex-ai-center();
   }
 }
-

@@ -20,4 +20,14 @@ $(document).ready(function () {
         prevArrow: $('.clients-arrow__left'),
         nextArrow: $('.clients-arrow__right'),
     });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+    
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+    
 });
