@@ -212,11 +212,6 @@
       margin-right: 15px;
       @extend %transition;
       @include pagination(49px);
-      & img {
-        width: 14px;
-        height: 26px;
-        vertical-align: middle;
-      }
       &:hover {
         background-color: $color4;
         color: white;
