@@ -1,7 +1,8 @@
 /* cover-section start */
 .cover {
-   background: url('../img/Layer4-blog.png') no-repeat center center/cover;
+  background: url("../img/Layer4-blog.png") no-repeat center center/cover;
   height: 174px;
+  width: 100%;
   h1 {
     font-size: 42px;
     color: $color3;
@@ -14,6 +15,15 @@
 .blog-right {
   .search-box {
     margin-top: 20px;
+    &::before {
+      content: "\f002";
+      font-family: "FontAwesome";
+      position: absolute;
+      right: 35px;
+      line-height: 50px;
+      color: rgb(186, 186, 186);
+      font-size: 18px;
+    }
   }
   & input,
   & input[type="email"] {
@@ -21,15 +31,6 @@
     outline: none;
     border: 1px solid rgb(233, 233, 233);
     padding-left: 17px;
-  }
-  &::before {
-    content: "\f002";
-    font-family: "FontAwesome";
-    position: absolute;
-    right: 35px;
-    line-height: 50px;
-    color: rgb(186, 186, 186);
-    font-size: 18px;
   }
   & input[placeholder],
   input[type="email"] {
@@ -60,7 +61,7 @@
             transform: translate(0, -5px);
           }
         }
-        & .social-fb{
+        & .social-fb {
           background-color: $colorFace;
         }
         & .social-tw {
