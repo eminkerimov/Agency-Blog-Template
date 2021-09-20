@@ -14,6 +14,15 @@
 .blog-right {
   .search-box {
     margin-top: 20px;
+    &::before {
+      content: "\f002";
+      font-family: "FontAwesome";
+      position: absolute;
+      right: 35px;
+      line-height: 50px;
+      color: rgb(186, 186, 186);
+      font-size: 18px;
+    }
   }
   & input,
   & input[type="email"] {
@@ -21,15 +30,6 @@
     outline: none;
     border: 1px solid rgb(233, 233, 233);
     padding-left: 17px;
-  }
-  &::before {
-    content: "\f002";
-    font-family: "FontAwesome";
-    position: absolute;
-    right: 35px;
-    line-height: 50px;
-    color: rgb(186, 186, 186);
-    font-size: 18px;
   }
   & input[placeholder],
   input[type="email"] {
@@ -218,4 +218,109 @@
       }
     }
   }
+}
+
+// Responsive----------------------
+
+@media only screen and (max-width: 1199px) {
+  .blog-right{
+    min-width: 220px;
+    .blog-post-img{
+      width: 230px;
+      height: 200px;
+    }
+    .search-box::before{
+      right: 20px;
+    }
+    .blog-post-recent ul li{
+      font-size: 13px;
+      margin-left: 2px;
+      &::before{
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .blog-right{
+    .title{
+      font-size: 24px;
+    }
+    .search-box::before{
+      right: -40px;
+    }
+  }
+  .pagination{
+    &-list{
+      padding-left: 0px;
+      li:first-child{
+        margin-right: 23px;
+      }
+      li:last-child{
+        margin-left: 23px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .blog-right{
+    .search-box{
+      max-width: 270px;
+      margin: 0 auto;
+      &::before{
+        right:155px;
+      }
+    }
+    .blog-form-social form{
+      max-width: 270px;
+      margin: 0 auto;
+    }
+    .blog-form-social {
+      margin-top: 25px;
+      ul{
+        margin-top: 32px;
+        margin-bottom: 32px;
+      }
+    }
+    .blog-btn{
+      margin-bottom: 32px;
+    }
+    .blog-categories ul{
+      margin-bottom: 15px;
+    }
+    .blog-post-img{
+      margin: 15px auto;
+    }
+    .blog-post .blog-date{
+      margin-bottom: 32px;
+    }
+    .blog-post-recent ul{
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .blog-post .blog-tag-list{
+      margin-bottom: 20px;
+    }
+  }
+  
+  .pagination{
+    &-list li a{
+      margin-right: 5px;
+      width: 39px;
+      height: 39px;
+      line-height: 39px;
+    }
+    &-list li:first-child{
+      margin-right: 10px;
+    }
+    &-list li:last-child{
+      margin-left:10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+    
 }
