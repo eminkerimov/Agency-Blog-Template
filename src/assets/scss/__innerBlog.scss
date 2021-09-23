@@ -37,7 +37,7 @@
     margin-top: 32px;
     margin-bottom: 38px;
     & img {
-     @include coverImage;
+      @include coverImage;
     }
   }
   & blockquote {
@@ -263,4 +263,51 @@
   & .elem-flex {
     @include flex-ai-center();
   }
+}
+
+// Responsive----------------------
+
+@media only screen and (max-width: 1199px) {
+  .blog-section {
+    .blog-item__content .inner-title {
+      margin-bottom: 14px;
+    }
+    .blog-item__content .inner-social {
+      margin-top: 0;
+      margin-bottom: 26px;
+    }
+    .blog-inner__content {
+      margin-top: 20px;
+    }
+    .blog-inner__content p:nth-child(2) {
+      margin: 18px 0;
+    }
+    .blog-inner__content h3 {
+      font-size: 20px;
+    }
+    .blog-inner__content__img {
+      margin-bottom: 30px;
+    }
+    .blog-inner__share {
+      padding-top: 60px;
+    }
+    .inner-post__pagination .previous:before,.inner-post__pagination .next:after{
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      font-size: 22px;
+    }
+    .inner-post__pagination a{
+      font-size: 19px;
+    }
+    }
+  }
+
+@media only screen and (max-width: 991px) {
+}
+
+@media only screen and (max-width: 767px) {
+}
+
+@media only screen and (max-width: 550px) {
 }
