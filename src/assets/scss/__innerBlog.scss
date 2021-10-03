@@ -329,7 +329,7 @@
             &:nth-child(2) {
               margin: 10px 0;
             }
-            &:nth-child(7){
+            &:nth-child(7) {
               margin-top: 13px;
               margin-bottom: 40px;
             }
@@ -343,407 +343,525 @@
             margin: 20px 0;
             height: 100px;
           }
-          blockquote{
+          blockquote {
             font-size: 16px;
             line-height: 1.4;
             padding-left: 25px;
-            &::before{
+            &::before {
               font-size: 16px;
             }
-            +p{
+            + p {
               margin-top: 7px;
             }
           }
         }
-      }
-      .blog-inner__share {
-        padding-top: 35px;
-      }
-      .blog-inner__share fieldset {
-        padding-top: 25px;
-        padding-bottom: 25px;
-        legend {
-          font-size: 20px;
-          padding: 0 30px;
-        }
-        ul li {
-          font-size: 13px;
-        }
-      }
-      .inner-post__pagination {
-        margin: 30px 0;
-        .previous:before {
-          margin-right: 6px;
-          width: 40px;
-          height: 40px;
-          line-height: 40px;
-          font-size: 22px;
-        }
-        .next:after {
-          margin-left: 6px;
-          width: 40px;
-          height: 40px;
-          line-height: 40px;
-          font-size: 22px;
-        }
-      }
-      .inner-post__pagination a {
-        font-size: 18px;
-      }
-      .inner-post .title,
-      .blog-comment .title,
-      .blog-inner__form .title {
-        font-size: 18px;
-        margin-bottom: 10px;
-      }
-      .inner-post__recent li {
-        font-size: 13px;
-        line-height: 1.6;
-        &::before {
-          margin-right: 15px;
-        }
-      }
-      .blog-comment__content {
-        padding-bottom: 10px;
-        .profile-img {
-          width: 80px;
-          height: 80px;
-        }
-        .user-name {
-          padding-left: 10px;
-          strong {
-            font-size: 13px;
-            line-height: 1.4;
+        .blog-inner__share {
+          padding-top: 35px;
+          fieldset {
+            padding: 25px 0;
           }
-          a {
+          legend {
+            font-size: 20px;
+            padding: 0 30px;
+          }
+          ul li {
             font-size: 13px;
           }
-          p {
+        }
+        .inner-post {
+          &__pagination {
+            margin: 30px 0;
+            a {
+              font-size: 18px;
+            }
+            .previous::before {
+              margin-right: 6px;
+              font-size: 22px;
+              @include square2(40px);
+            }
+            .next::after {
+              margin-left: 6px;
+              font-size: 22px;
+              @include square2(40px);
+            }
+          }
+          .title {
+            font-size: 18px;
+          }
+          &__recent li {
             font-size: 13px;
-            line-height: 1.5;
+            line-height: 1.6;
+            &::before {
+              margin-right: 15px;
+            }
           }
         }
-      }
-      .reply {
-        padding-left: 50px;
-        margin-top: 20px;
-      }
-      .blog-inner__form {
-        margin-top: 20px;
-        margin-bottom: 10px;
-      }
-      form {
-        margin-top: 15px;
-      }
-      .blog-inner__form [type="email"],
-      .blog-inner__form input[type="text"] {
-        height: 35px;
-        margin-bottom: 20px;
-        font-size: 13px;
-      }
-      .blog-inner__form textarea {
-        padding-left: 15px;
-        padding-top: 10px;
-        height: 145px;
-        margin-bottom: 15px;
-      }
-      .blog-inner__form input[type="checkbox"] {
-        width: 20px;
-        height: 20px;
-        margin-right: 8px;
-      }
-      .blog-inner__form label {
-        font-size: 12px;
-        line-height: 1.4;
-      }
-      .blog-inner__form input[type="checkbox"]::before {
-        font-size: 13px;
-      }
-      .blog-inner__form button {
-        font-size: 14px;
-        line-height: 1.5;
-        padding: 4px 40px;
-      }
-    }
-  }
-
-  @media only screen and (max-width: 767px) {
-    .blog-section {
-      .blog-item__content .inner-title {
-        margin-bottom: 8px;
-      }
-      .blog-item__content .inner-social {
-        margin-bottom: 15px;
-      }
-      .blog-inner__content {
-        margin-top: 8px;
-      }
-      .blog-inner__content p:nth-child(2) {
-        margin: 7px 0;
-      }
-      .blog-inner__content h3 {
-        font-size: 15px;
-        line-height: 1.4;
-        margin-bottom: 6px;
-      }
-      .blog-inner__content__img {
-        margin: 10px 0;
-        height: 100px;
-      }
-      .blog-inner__content p:nth-child(7) {
-        margin-top: 5px;
-        margin-bottom: 30px;
-      }
-      .blog-inner__content blockquote::before {
-        font-size: 14px;
-      }
-      .blog-inner__content blockquote {
-        font-size: 15px;
-        line-height: 1.4;
-        padding-left: 24px;
-      }
-      .blog-inner__share {
-        padding-top: 20px;
-      }
-      .blog-inner__share fieldset {
-        padding: 20px 0;
-        legend {
-          font-size: 18px;
-          padding: 0 30px;
+        .blog-comment {
+          .title {
+            font-size: 18px;
+          }
+          &__content {
+            padding-bottom: 10px;
+            .profile-img {
+              @include square(80px);
+            }
+            .user-name {
+              padding-left: 10px;
+            }
+            strong {
+              font-size: 13px;
+              line-height: 1.4;
+            }
+            a {
+              font-size: 13px;
+            }
+            p {
+              font-size: 13px;
+              line-height: 1.3;
+            }
+          }
+          .reply {
+            padding-left: 50px;
+            margin-top: 20px;
+          }
         }
-      }
-      .inner-post__pagination {
-        margin: 20px 0;
-        .previous:before {
-          margin-right: 6px;
-          width: 35px;
-          height: 35px;
-          line-height: 35px;
-          font-size: 18px;
-        }
-        .next:after {
-          margin-left: 6px;
-          width: 35px;
-          height: 35px;
-          line-height: 35px;
-          font-size: 18px;
-        }
-      }
-      .inner-post__pagination a {
-        font-size: 16px;
-      }
-      .inner-post .title {
-        font-size: 16px;
-        margin-bottom: 10px;
-      }
-      .inner-post__recent li {
-        font-size: 12px;
-        &::before {
-          margin-right: 7px;
-          width: 4px;
-          height: 4px;
-        }
-      }
-      .blog-comment .title {
-        margin-top: 12px;
-      }
-      .blog-comment__content {
-        padding-bottom: 10px;
-        .profile-img {
-          width: 70px;
-          height: 70px;
-        }
-        .user-name {
-          padding-left: 0px;
-          strong {
+        .blog-inner__form {
+          margin-top: 20px;
+          margin-bottom: 10px;
+          .title {
+            font-size: 18px;
+          }
+          form {
+            margin-top: 15px;
+          }
+          input[type="email"],
+          input[type="text"] {
+            height: 35px;
+            margin-bottom: 20px;
+            font-size: 13px;
+          }
+          textarea {
+            padding-left: 15px;
+            padding-top: 10px;
+            height: 145px;
+            margin-bottom: 15px;
+          }
+          input[type="checkbox"] {
+            @include square(20px);
+            margin-right: 8px;
+            &::before {
+              font-size: 13px;
+            }
+          }
+          label {
             font-size: 12px;
             line-height: 1.4;
           }
-          a {
-            font-size: 12px;
+          button {
+            font-size: 14px;
+            line-height: 1.5;
+            padding: 4px 40px;
           }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .blog-section {
+    .blog-item {
+      &__content {
+        .inner-social {
+          margin-bottom: 15px;
+        }
+        .blog-inner__content {
+          margin-top: 8px;
           p {
             font-size: 12px;
-            line-height: 1.5;
+            line-height: 1.4;
+            &:nth-child(2) {
+              margin: 7px 0;
+            }
+            &:nth-child(7) {
+              margin-top: 7px;
+              margin-bottom: 30px;
+            }
+          }
+          h3 {
+            font-size: 15px;
+            line-height: 1.4;
+            margin-bottom: 6px;
+          }
+          &__img {
+            margin: 10px 0;
+            height: 100px;
+          }
+          blockquote {
+            font-size: 15px;
+            line-height: 1.4;
+            padding-left: 24px;
+            &::before {
+              font-size: 14px;
+            }
+            + p {
+              margin-top: 7px;
+            }
+          }
+        }
+        .blog-inner__share {
+          padding-top: 20px;
+          fieldset {
+            padding: 20px 0;
+          }
+          legend {
+            font-size: 18px;
+            padding: 0 30px;
+          }
+          ul li {
+            font-size: 12px;
+          }
+        }
+        .inner-post {
+          &__pagination {
+            margin: 20px 0;
+            a {
+              font-size: 16px;
+            }
+            .previous::before {
+              margin-right: 6px;
+              font-size: 18px;
+              @include square2(35px);
+            }
+            .next::after {
+              margin-left: 6px;
+              font-size: 18px;
+              @include square2(35px);
+            }
+          }
+          .title {
+            font-size: 16px;
+          }
+          &__recent li {
+            font-size: 12px;
+            line-height: 1.6;
+            &::before {
+              margin-right: 7px;
+              @include square(4px);
+            }
+          }
+        }
+        .blog-comment {
+          .title {
+            font-size: 16px;
+            margin-top: 12px;
+          }
+          &__content {
+            padding-bottom: 10px;
+            .profile-img {
+              @include square(70px);
+            }
+            .user-name {
+              padding-left: 0px;
+            }
+            strong {
+              font-size: 12px;
+              line-height: 1;
+            }
+            a {
+              font-size: 12px;
+            }
+            p {
+              font-size: 12px;
+              line-height: 1.3;
+            }
+          }
+          .reply {
+            padding-left: 40px;
+            margin-top: 20px;
+          }
+        }
+        .blog-inner__form {
+          .title {
+            font-size: 16px;
           }
         }
       }
-      .reply {
-        padding-left: 50px;
-        margin-top: 20px;
-      }
     }
   }
+}
 
-  @media only screen and (max-width: 550px) {
-    .blog-section {
-      .blog-inner__content p {
-        font-size: 10px;
-      }
-      .blog-inner__content h3 {
-        font-size: 13px;
-      }
-      .blog-inner__content__img {
-        margin: 10px 0;
-        height: 65px;
-      }
-      .blog-inner__content blockquote {
-        font-size: 13px;
-        line-height: 1.4;
-        padding-left: 14px;
-        &::before {
-          font-size: 12px;
+@media only screen and (max-width: 550px) {
+  .blog-section {
+    .blog-item {
+      &__content {
+        &__img {
+          margin-bottom: 10px;
         }
-      }
-      .blog-inner__share {
-        padding-top: 15px;
-      }
-      .blog-inner__share fieldset ul li {
-        font-size: 12px;
-        margin-right: 5px;
-      }
-      .blog-inner__share fieldset legend {
-        font-size: 16px;
-        padding: 0px 15px;
-      }
-      .inner-post__pagination {
-        margin: 12px 0;
-        .previous:before {
-          margin-right: 6px;
-          width: 30px;
-          height: 30px;
-          line-height: 30px;
-          font-size: 16px;
+        .inner-social {
+          margin-bottom: 20px;
         }
-        .next:after {
-          margin-left: 6px;
-          width: 30px;
-          height: 30px;
-          line-height: 30px;
-          font-size: 16px;
+        .blog-inner__content {
+          margin-top: 5px;
+          p {
+            font-size: 12px;
+            line-height: 1.4;
+            &:nth-child(2) {
+              margin: 5px 0;
+            }
+            &:nth-child(7) {
+              margin-top: 5px;
+              margin-bottom: 40px;
+            }
+          }
+          h3 {
+            font-size: 15px;
+            line-height: 1.5;
+            margin-bottom: 5px;
+          }
+          &__img {
+            margin: 10px 0;
+            height: 100px;
+          }
+          blockquote {
+            font-size: 13px;
+            line-height: 1.4;
+            padding-left: 15px;
+            &::before {
+              font-size: 12px;
+            }
+            + p {
+              margin-top: 5px;
+              font-size: 11px;
+            }
+          }
         }
-      }
-      .inner-post__pagination a {
-        font-size: 14px;
-      }
-      .inner-post .title {
-        font-size: 14px;
-        margin-bottom: 5px;
-      }
-      .inner-post__recent li {
-        font-size: 11px;
-      }
-      .blog-comment .title {
-        font-size: 14px;
-        margin: 8px 0;
-      }
-      .blog-comment__content {
-        margin-bottom: 0;
-        justify-content: space-around;
-        .profile-img {
-          width: 60px;
-          height: 60px;
+        .blog-inner__share {
+          padding-top: 30px;
+          fieldset {
+            padding: 25px 0;
+          }
+          legend {
+            font-size: 16px;
+            padding: 0 15px;
+          }
+          ul li {
+            font-size: 12px;
+          }
         }
-        .user-name strong {
-          font-size: 11px;
-          margin-right: 5px;
+        .inner-post {
+          &__pagination {
+            margin: 15px 0;
+            a {
+              font-size: 14px;
+            }
+            .previous::before {
+              margin-right: 6px;
+              font-size: 16px;
+              @include square2(30px);
+            }
+            .next::after {
+              margin-left: 6px;
+              font-size: 16px;
+              @include square2(30px);
+            }
+          }
+          .title {
+            font-size: 15px;
+          }
+          &__recent li {
+            font-size: 12px;
+            line-height: 1.4;
+            &::before {
+              margin-right: 10px;
+            }
+          }
         }
-        .user-name a,
-        .user-name p {
-          font-size: 11px;
+        .blog-comment {
+          .title {
+            font-size: 15px;
+            margin-bottom: 5px;
+          }
+          &__content {
+            justify-content: space-around;
+            padding-bottom: 10px;
+            .profile-img {
+              @include square(60px);
+            }
+            .user-name {
+              padding-left: 10px;
+            }
+            strong {
+              font-size: 11px;
+              line-height: 1.4;
+            }
+            a {
+              font-size: 11px;
+            }
+            p {
+              font-size: 11px;
+              line-height: 1.3;
+            }
+          }
+          .reply {
+            padding-left: 40px;
+            margin-top: 20px;
+          }
         }
-      }
-      .blog-inner__form .title {
-        font-size: 14px;
-      }
-      .blog-inner__form label {
-        font-size: 10px;
-      }
-      .blog-inner__form button {
-        font-size: 12px;
-        line-height: 1.2;
-        padding: 4px 20px;
+        .blog-inner__form {
+          margin-top: 20px;
+          margin-bottom: 10px;
+          .title {
+            font-size: 15px;
+          }
+          form {
+            margin-top: 15px;
+          }
+          input[type="email"],
+          input[type="text"] {
+            height: 35px;
+            margin-bottom: 15px;
+            font-size: 10px;
+          }
+          textarea {
+            padding-left: 10px;
+            padding-top: 8px;
+            height: 145px;
+            margin-bottom: 15px;
+            font-size: 10px;
+          }
+          input[type="checkbox"] {
+            @include square(20px);
+            margin-right: 8px;
+            &::before {
+              font-size: 13px;
+            }
+          }
+          label {
+            font-size: 11px;
+            line-height: 1.4;
+          }
+          button {
+            font-size: 13px;
+            line-height: 1.5;
+            padding: 4px 30px;
+          }
+        }
       }
     }
   }
-  @media only screen and (max-width: 450px) {
-    .blog-section {
-      .blog-inner__content blockquote::before {
-        font-size: 10px;
-      }
-      .blog-inner__content blockquote {
-        font-size: 11px;
-      }
-      .blog-inner__share fieldset legend {
-        font-size: 12px;
-        padding: 0 15px;
-      }
-      .blog-inner__share fieldset ul {
-        display: flex;
-        flex-direction: column;
-      }
-      .inner-post__pagination {
-        margin: 12px 0;
-        .previous:before {
-          margin-right: 4px;
-          width: 25px;
-          height: 25px;
-          line-height: 25px;
-          font-size: 14px;
+}
+@media only screen and (max-width: 450px) {
+  .blog-section {
+    .blog-item {
+      &__content {
+        .blog-inner__share {
+          padding-top: 20px;
+          fieldset {
+            padding: 10px 0;
+            ul {
+              display: flex;
+              flex-direction: column;
+            }
+          }
+          legend {
+            font-size: 12px;
+            padding: 0 15px;
+          }
+          ul li {
+            font-size: 11px;
+            margin-top: 5px;
+          }
         }
-        .next:after {
-          margin-left: 4px;
-          width: 25px;
-          height: 25px;
-          line-height: 25px;
-          font-size: 14px;
+        .inner-post {
+          &__pagination {
+            margin: 12px 0;
+            a {
+              font-size: 12px;
+            }
+            .previous::before {
+              margin-right: 4px;
+              font-size: 14px;
+              @include square2(25px);
+            }
+            .next::after {
+              margin-left: 4px;
+              font-size: 14px;
+              @include square2(25px);
+            }
+          }
+          &__recent li {
+            font-size: 10px;
+            line-height: 1.3;
+            &::before {
+              margin-right: 8px;
+            }
+          }
         }
-      }
-      .inner-post__pagination a {
-        font-size: 12px;
-      }
-      .blog-comment__content {
-        margin-bottom: 0;
-        justify-content: space-around;
-        .profile-img {
-          width: 50px;
-          height: 50px;
+        .blog-comment {
+          &__content {
+            padding-bottom: 5px;
+            .profile-img {
+              @include square(50px);
+            }
+            .user-name {
+              padding-left: 10px;
+              width: calc(100% - 50px);
+            }
+            strong {
+              font-size: 9px;
+              line-height: 1.4;
+            }
+            a {
+              font-size: 9px;
+            }
+            p {
+              font-size: 9px;
+              line-height: 1.3;
+            }
+          }
+          .reply {
+            padding-left: 25px;
+            margin-top: 0px;
+          }
         }
-        .user-name strong {
-          font-size: 10px;
-          margin-right: 5px;
+        .blog-inner__form {
+          margin-top: 20px;
+          margin-bottom: 10px;
+          form {
+            margin-top: 15px;
+          }
+          input[type="email"],
+          input[type="text"] {
+            height: 30px;
+            margin-bottom: 10px;
+            font-size: 10px;
+          }
+          textarea {
+            padding-left: 10px;
+            padding-top: 8px;
+            height: 110px;
+            margin-bottom: 10px;
+            font-size: 10px;
+          }
+          input[type="checkbox"] {
+            width: 20px;
+            height: 15px;
+            margin-right: 6px;
+            &::before {
+              font-size: 9px;
+            }
+          }
+          label {
+            font-size: 8px;
+            line-height: 1.4;
+          }
+          button {
+            font-size: 10px;
+            line-height: 1.5;
+            padding: 4px 20px;
+          }
         }
-        .user-name a,
-        .user-name p {
-          font-size: 9px;
-        }
-      }
-      .reply {
-        padding-left: 20px;
-        margin-top: 5px;
-      }
-      .blog-inner__form textarea {
-        padding-left: 10px;
-        padding-top: 10px;
-        height: 90px;
-        margin-bottom: 15px;
-        font-size: 12px;
-      }
-      .blog-inner__form input[type="checkbox"] {
-        width: 20px;
-        height: 13px;
-        margin-right: 5px;
-      }
-      .blog-inner__form input[type="checkbox"]::before {
-        font-size: 9px;
-      }
-      .blog-inner__form label {
-        font-size: 8px;
-      }
-      .blog-inner__form button {
-        font-size: 11px;
-        line-height: 1.2;
-        padding: 3px 12px;
       }
     }
   }
