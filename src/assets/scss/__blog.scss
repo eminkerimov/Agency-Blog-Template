@@ -226,6 +226,11 @@
 // Responsive----------------------
 
 @media only screen and (max-width: 1199px) {
+  header {
+    .menu {
+      display: none;
+    }
+  }
   .blog-right {
     min-width: 220px;
     .title {
@@ -252,6 +257,9 @@
         }
       }
     }
+  }
+  .pagination {
+    padding-bottom: 60px;
   }
 }
 
@@ -297,7 +305,7 @@
       margin-top: 15px;
       margin-bottom: 20px;
       li a {
-        font-size: 12px;
+        font-size: 13px;
         line-height: 1.5;
         &::before {
           font-size: 15px;
@@ -323,7 +331,7 @@
         margin-top: 10px;
         margin-bottom: 20px;
         li {
-          font-size: 12px;
+          font-size: 13px;
           line-height: 2;
           &::before {
             @include square(5px);
@@ -340,6 +348,7 @@
     }
   }
   .pagination {
+    padding-bottom: 40px;
     &-list {
       padding-left: 80px;
       li {
@@ -349,7 +358,7 @@
           font-size: 20px;
         }
         &:first-child {
-          margin-right:30px;
+          margin-right: 30px;
         }
         &:last-child {
           margin-left: 30px;
@@ -399,11 +408,12 @@
         margin-bottom: 15px;
       }
       .blog-tag-list {
-        margin-top: 15px;
+        margin: 15px 0;
       }
     }
   }
   .pagination {
+    padding-bottom: 30px;
     &-list {
       padding-left: 0px;
       li {
@@ -436,47 +446,81 @@
         }
       }
     }
+    .blog-form {
+      margin-top: 35px;
+      input[placeholder],
+      input[type="email"] {
+        font-size: 12px;
+        height: 40px;
+      }
+      .search-box::before {
+        font-size: 12px;
+        line-height: 42px;
+      }
+    }
   }
   .pagination {
     &-list {
-      overflow-x: scroll;
-      li {
-        *{
-          overflow-x:auto;
-        }
-        a {
-          margin-right: 5px;
-          @include square2(30px);
-          font-size: 16px;
-        }
-        &:first-child {
-          margin-right: 5px;
-        }
-        &:last-child {
-          margin-left: 5px;
+      ul {
+        display: flex;
+        overflow-x: auto;
+        li {
+          a {
+            margin-right: 5px;
+            @include square2(30px);
+            font-size: 16px;
+          }
+          &:first-child {
+            margin-right: 5px;
+          }
+          &:last-child {
+            margin-left: 5px;
+          }
         }
       }
     }
   }
-}
-@media only screen and (max-width: 400px) {
-  .blog-right {
-    .search-box {
-      max-width: 200px;
+  footer {
+    .footer-social{
+      padding: 0;
+      li a {
+        @include square(34px);
+        font-size: 15px;
+      }
     }
-    .blog-form-social {
-      form {
-        margin-top: 0;
+    .footer-copyright{
+      padding: 5px 0;
+    }
+  }
+}
+@media only screen and (max-width: 450px) {
+  .blog-right {
+    .blog-form {
+      input[placeholder],
+      input[type="email"] {
+        font-size: 12px;
+        height: 34px;
       }
-      ul {
-        margin-bottom: 0;
+      .search-box::before {
+        font-size: 11px;
+        line-height: 36px;
       }
-      input {
-        max-width: 200px;
-      }
-      .blog-btn {
-        padding: 10px 12px;
-        font-size: 13px;
+      &-social {
+        form {
+          margin-top: 25px;
+          margin-bottom: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        ul {
+          margin-bottom: 0;
+        }
+        .blog-btn {
+          padding: 10px 12px;
+          font-size: 13px;
+          margin: 0 0 0 5px;
+        }
       }
     }
   }
