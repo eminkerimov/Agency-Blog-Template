@@ -15,11 +15,12 @@
 .blog-right {
   .search-box {
     margin-top: 20px;
+    position: relative;
     &::before {
       content: "\f002";
       font-family: "FontAwesome";
       position: absolute;
-      right: 35px;
+      right: 16px;
       line-height: 50px;
       color: rgb(186, 186, 186);
       font-size: 18px;
@@ -93,6 +94,7 @@
       font-size: 13px;
       color: $color2;
       line-height: 2.769;
+      display: inline-block;
     }
     & li a::before {
       content: "\f105";
@@ -102,16 +104,16 @@
       color: $color1;
       margin-right: 20px;
     }
-    & li:hover {
+    & li a:hover {
       background-color: rgb(72, 84, 96);
       border-radius: 3px;
       margin-left: 5px;
       color: white;
       @extend %transition;
+      padding: 0 7px;
     }
     & li:hover a {
       color: white;
-      margin-left: 15px;
     }
   }
   .blog-post {
@@ -216,6 +218,309 @@
       &:hover {
         background-color: $color4;
         color: white;
+      }
+    }
+  }
+}
+
+// Responsive----------------------
+
+@media only screen and (max-width: 1199px) {
+  header {
+    .menu {
+      display: none;
+    }
+  }
+  .blog-right {
+    min-width: 220px;
+    .title {
+      font-size: 24px;
+    }
+    .blog-categories ul li a {
+      font-size: 12px;
+      line-height: 1.5;
+      &::before {
+        font-size: 15px;
+        margin-right: 10px;
+      }
+    }
+    .blog-post {
+      &-img {
+        width: 220px;
+        height: 185px;
+      }
+      &-recent ul li {
+        font-size: 13px;
+        margin-left: 2px;
+        &::before {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+  .pagination {
+    padding-bottom: 60px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .blog-right {
+    .blog-form {
+      margin-top: 35px;
+      input[placeholder],
+      input[type="email"] {
+        font-size: 13px;
+        height: 40px;
+      }
+      .search-box::before {
+        font-size: 14px;
+        line-height: 42px;
+      }
+      &-social {
+        margin-top: 40px;
+        ul {
+          margin-top: 15px;
+          margin-bottom: 35px;
+          li {
+            margin-right: 5px;
+            a {
+              @include square2(34px);
+              i {
+                font-size: 16px;
+              }
+            }
+          }
+        }
+        .blog-btn {
+          padding: 10px 36px;
+          font-size: 15px;
+          margin-bottom: 35px;
+        }
+      }
+    }
+    .title {
+      font-size: 22px;
+    }
+    .blog-categories ul {
+      margin-top: 15px;
+      margin-bottom: 20px;
+      li a {
+        font-size: 13px;
+        line-height: 1.5;
+        &::before {
+          font-size: 15px;
+          margin-right: 10px;
+        }
+      }
+    }
+    .blog-post {
+      &-img {
+        margin: 15px 0;
+      }
+      p {
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+      .blog-date {
+        margin-bottom: 20px;
+        span {
+          font-size: 13px;
+        }
+      }
+      &-recent ul {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        li {
+          font-size: 13px;
+          line-height: 2;
+          &::before {
+            @include square(5px);
+            margin-right: 10px;
+          }
+        }
+      }
+      .blog-tag-list {
+        margin-top: 20px;
+        a {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .pagination {
+    padding-bottom: 40px;
+    &-list {
+      padding-left: 80px;
+      li {
+        a {
+          margin-right: 5px;
+          @include square2(40px);
+          font-size: 20px;
+        }
+        &:first-child {
+          margin-right: 30px;
+        }
+        &:last-child {
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .cover h1 {
+    font-size: 40px;
+  }
+  .blog-right {
+    .blog-form {
+      &-social {
+        margin-top: 25px;
+        ul {
+          margin-top: 10px;
+          margin-bottom: 25px;
+          li {
+            margin-right: 5px;
+            a {
+              @include square2(30px);
+              i {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+        .blog-btn {
+          padding: 10px 25px;
+          font-size: 15px;
+          margin-bottom: 25px;
+        }
+      }
+    }
+    .blog-categories ul {
+      margin-top: 10px;
+    }
+    .blog-post {
+      .blog-date {
+        margin-bottom: 15px;
+      }
+      &-recent ul {
+        margin-top: 6px;
+        margin-bottom: 15px;
+      }
+      .blog-tag-list {
+        margin: 15px 0;
+      }
+    }
+  }
+  .pagination {
+    padding-bottom: 30px;
+    &-list {
+      padding-left: 0px;
+      li {
+        a {
+          margin-right: 5px;
+          @include square2(35px);
+          font-size: 14px;
+        }
+        &:first-child {
+          margin-right: 10px;
+        }
+        &:last-child {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .cover h1 {
+    font-size: 35px;
+  }
+  .blog-right {
+    .blog-form-social {
+      ul li a {
+        @include square2(26px);
+        i {
+          font-size: 12px;
+        }
+      }
+    }
+    .blog-form {
+      margin-top: 35px;
+      input[placeholder],
+      input[type="email"] {
+        font-size: 12px;
+        height: 40px;
+      }
+      .search-box::before {
+        font-size: 12px;
+        line-height: 42px;
+      }
+    }
+  }
+  .pagination {
+    &-list {
+      ul {
+        display: flex;
+        overflow-x: auto;
+        li {
+          a {
+            margin-right: 5px;
+            @include square2(30px);
+            font-size: 16px;
+          }
+          &:first-child {
+            margin-right: 5px;
+          }
+          &:last-child {
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    .footer-social{
+      padding: 0;
+      li a {
+        @include square(34px);
+        font-size: 15px;
+      }
+    }
+    .footer-copyright{
+      padding: 5px 0;
+    }
+  }
+}
+@media only screen and (max-width: 450px) {
+  .blog-right {
+    .blog-form {
+      input[placeholder],
+      input[type="email"] {
+        font-size: 12px;
+        height: 34px;
+      }
+      .search-box::before {
+        font-size: 11px;
+        line-height: 36px;
+      }
+      &-social {
+        form {
+          margin-top: 25px;
+          margin-bottom: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        ul {
+          margin-bottom: 0;
+        }
+        .blog-btn {
+          padding: 10px 12px;
+          font-size: 13px;
+          margin: 0 0 0 5px;
+        }
       }
     }
   }

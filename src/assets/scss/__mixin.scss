@@ -10,7 +10,11 @@
   width: $value;
   height: $value;
 }
-
+@mixin square2($value) {
+  width: $value;
+  height: $value;
+  line-height: $value;
+}
 @mixin fit($value: cover) {
   object-fit: $value;
   -moz-object-fit: $value;
